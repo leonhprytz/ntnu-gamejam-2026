@@ -1,0 +1,9 @@
+# Unity YAML files
+[attr]unityyaml merge=unityyamlmerge eol=lf
+
+*.unity unityyaml
+*.prefab unityyaml
+*.asset unityyaml
+*.mat unityyaml
+*.anim unityyaml
+*.controller unityyaml
