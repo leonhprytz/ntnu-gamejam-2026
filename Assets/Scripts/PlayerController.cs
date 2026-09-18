@@ -3,11 +3,11 @@ using UnityEngine.InputSystem;
 
 enum MoveDirection
 {
+    None,
     Up,
     Right,
     Down,
     Left,
-    None,
 }
 
 class MovePriority
@@ -95,6 +95,7 @@ class MovePriority
 public class PlayerController : MonoBehaviour
 {
     private MovePriority movePriority = new MovePriority();
+    private Animator animator;
 
     public float moveSpeed;
     public Rigidbody2D rb;
@@ -144,8 +145,6 @@ public class PlayerController : MonoBehaviour
     void move()
     {
         MoveDirection md = this.movePriority.getPriority();
-        if (md == MoveDirection.None)
-            return;
 
         Vector2 dv = Vector2.zero;
         switch (md)
@@ -166,10 +165,15 @@ public class PlayerController : MonoBehaviour
 
         Vector2 pos = new Vector2(this.transform.position.x, this.transform.position.y);
         rb.MovePosition(pos + Time.deltaTime * dv * moveSpeed);
+        print((int)md);
+        animator.SetInteger("moveDirection", (int)md);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start() { }
+    void Start()
+    {
+        this.animator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
