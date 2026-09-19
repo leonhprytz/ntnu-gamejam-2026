@@ -61,7 +61,6 @@ public class QuestLine : MonoBehaviour
 
     void OnLightValueChanged(int currentLightValue)
     {
-        Debug.Log("lightValueChanged: " + currentLightValue);
         if (questLineStarted)
         {
             return;
