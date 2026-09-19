@@ -169,11 +169,22 @@ public class PlayerController : MonoBehaviour
         animator.SetInteger("moveDirection", (int)md);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerExit2D(Collider2D other)
     {
-        print(collision);
-        rb.angularVelocity = 0;
-        rb.linearVelocity = Vector2.zero;
+        if (other.CompareTag("EmberTrigger"))
+        {
+            SpriteRenderer sr = GetComponent<SpriteRenderer>();
+            sr.sortingLayerName = "Collision";
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("EmberTrigger"))
+        {
+            SpriteRenderer sr = GetComponent<SpriteRenderer>();
+            sr.sortingLayerName = "Player";
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

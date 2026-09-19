@@ -13,6 +13,7 @@ public class BonfireManager : MonoBehaviour
 
     public FireController fireController;
     public BonfireAudioController bonfireAudioController;
+    public EmberController emberController;
 
     [SerializeField]
     private BonfireSize _size;
@@ -24,6 +25,7 @@ public class BonfireManager : MonoBehaviour
             _size = value;
             fireController.fireSize = size;
             bonfireAudioController.size = size;
+            emberController.size = size;
             animator?.SetInteger("bonfireSize", (int)size);
         }
     }
