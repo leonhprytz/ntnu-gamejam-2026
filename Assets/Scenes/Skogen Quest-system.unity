@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65e324250c34240299320572ac30513e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaalController
-  state: 0
+  state: 1
   radii:
   - 1.85
   - 3.2
@@ -1634,8 +1634,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestManager
   questlines:
   - {fileID: 1939425245}
+  questlinesCompleted: 
   lightValue: 0
-  prevLightValue: 0
 --- !u!4 &1472119029
 Transform:
   m_ObjectHideFlags: 0
@@ -12909,13 +12909,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestLine
   questName: ListenToGuitar
-  interactionCheckpoints: []
+  interactionCheckpoints:
+  - {fileID: 2025083252}
+  interactionsCompleted: 
   lightValueToStartQuestLine: 10
+  lightValueWin: 10
+  lightValueLose: 10
   spawnsNPC: 1
   npcToSpawn: {fileID: 2025083249}
   startPoint: {fileID: 1994241351}
-  relatedNPCs: []
-  interactionsCompleted: 0
+  questLineWon: 0
 --- !u!1 &1994241350
 GameObject:
   m_ObjectHideFlags: 0
@@ -12973,7 +12976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2994312719847925240, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: movementPoints.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2994312719847925240, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: 'movementPoints.Array.data[0]'
@@ -12990,7 +12993,7 @@ PrefabInstance:
     - target: {fileID: 2994312719847925240, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: 'movementPoints.Array.data[3]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1817646674}
     - target: {fileID: 5062482056054078235, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -13050,6 +13053,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1383550599321744476, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
   m_PrefabInstance: {fileID: 2025083247}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2025083252 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7013522983558394130, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+  m_PrefabInstance: {fileID: 2025083247}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025083249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f377838b80336d4cb72c3cd42745040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionCheckpoint
 --- !u!1 &2130786476
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,8 @@ public class InteractionCheckpoint : MonoBehaviour
 
     public event Action<InteractionCheckpoint> interactionCompletedEvent;
     public bool interactionCompleted;
+    
+    public QuestLine questLine;
 
     private bool done = false;
 
@@ -15,20 +17,35 @@ public class InteractionCheckpoint : MonoBehaviour
 
     }
 
+    public bool VerifyInteraction()
+    {
+        questLine.VerifyInteraction(this);
+        return true;        
+    }
+
     public void MarkInteractionComplete()
     {
         interactionCompletedEvent?.Invoke(this);
     }
 
-
-}
-
-
-public class temp : InteractionCheckpoint
-{
-
-    private void EndOfInteraction()
+    public void SetQuestLineWon(bool win)
     {
-        MarkInteractionComplete();
+        questLine.questLineWon = win;
     }
+
+    void Update()
+    {
+        if (done)
+        {
+            return;
+        }
+
+        if (interactionCompleted)
+        {
+            done = true;
+            MarkInteractionComplete();
+        }
+    }
+    
 }
+
