@@ -1,33 +1,24 @@
 using System;
 using UnityEngine;
 
+// A single step in a QuestLine. Not an Interactable: the questline is what the
+// player interacts with, and it drives its current checkpoint directly.
 public abstract class InteractionCheckpoint : MonoBehaviour
 {
 
     public event Action<InteractionCheckpoint> interactionCompletedEvent;
     public bool interactionCompleted;
-    
+
     private QuestLine questLine;
 
     private bool done = false;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
     public void setQuestLine(QuestLine questLine)
     {
         this.questLine = questLine;
     }
 
-    public abstract void TryInteract();
-
-    public bool VerifyInteraction()
-    {
-        return questLine.VerifyInteraction(this);        
-    }
+    public abstract void Interact();
 
     public void MarkInteractionComplete()
     {
@@ -53,6 +44,5 @@ public abstract class InteractionCheckpoint : MonoBehaviour
             MarkInteractionComplete();
         }
     }
-    
-}
 
+}

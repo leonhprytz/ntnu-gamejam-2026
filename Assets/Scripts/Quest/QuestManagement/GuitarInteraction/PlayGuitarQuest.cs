@@ -3,12 +3,9 @@ using UnityEngine;
 
 public class PlayGuitarQuest : InteractionCheckpoint
 {
-    public override void TryInteract()
+    public override void Interact()
     {
-        if (VerifyInteraction())
-        {
-            Debug.Log("PlayGuitarQuest interacted");
-            MarkInteractionComplete();
-        }
+        Debug.Log("PlayGuitarQuest interacted");
+        MarkInteractionComplete();
     }
 }

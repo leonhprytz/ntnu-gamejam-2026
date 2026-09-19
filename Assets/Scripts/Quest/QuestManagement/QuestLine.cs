@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 
 // [CustomEditor(typeof(QuestLine))]
-public class QuestLine : MonoBehaviour
+public class QuestLine : Interactable
 {
     public string questName;
     public InteractionCheckpoint[] interactionCheckpoints;
@@ -28,9 +28,13 @@ public class QuestLine : MonoBehaviour
     private bool questLineStarted = false;
     public bool questLineWon;
 
+    // Questlines outrank scenery, so walking up to an NPC standing next to a
+    // tree always talks to the NPC.
+    public override int BasePriority => 100;
+
+
     void Start()
     {
-        InteractionManager.instance.InteractWasPressed += tryInteractionCheckpoint;
         // interactionsCompleted = new List<bool>();
 
         QuestManager.instance.LightValueChanged += OnLightValueChanged;
@@ -40,12 +44,21 @@ public class QuestLine : MonoBehaviour
             interactionCheckpoints[i].interactionCompletedEvent += MarkInteractionComplete;
             // interactionsCompleted.Add(false);
         }
+
+        // LightValueChanged only fires on a change, so a questline whose
+        // threshold is already met at boot would otherwise never start.
+        OnLightValueChanged(QuestManager.instance.lightValue);
     }
 
-    public void tryInteractionCheckpoint()
+    public override bool TryInteract()
     {
-        if (currentInteractionCheckpointIndex >= interactionCheckpoints.Length) return;
-        interactionCheckpoints[currentInteractionCheckpointIndex].TryInteract();
+        // Decline the press rather than swallowing it, so a finished or
+        // not-yet-available questline doesn't block whatever else is in range.
+        if (!questLineStarted) return false;
+        if (currentInteractionCheckpointIndex >= interactionCheckpoints.Length) return false;
+
+        interactionCheckpoints[currentInteractionCheckpointIndex].Interact();
+        return true;
     }
     public void StartQuestLine()
     {
@@ -56,17 +69,11 @@ public class QuestLine : MonoBehaviour
         }
     }
 
-    public bool VerifyInteraction(InteractionCheckpoint interactionCheckpoint){
-        // int index = Array.IndexOf(interactionCheckpoints, interactionCheckpoint);
-
-        // return interactionsCompleted[index];
-        return currentInteractionCheckpointIndex == Array.IndexOf(interactionCheckpoints, interactionCheckpoint);
-
-    }
-
     private void MarkInteractionComplete(InteractionCheckpoint interactionCheckpoint)
     {
         // Only the step the questline is currently on may advance the cursor.
+        // TryInteract can no longer drive the wrong step, but a checkpoint can
+        // still self-complete via its public interactionCompleted flag.
         if (Array.IndexOf(interactionCheckpoints, interactionCheckpoint) != currentInteractionCheckpointIndex)
         {
             return;

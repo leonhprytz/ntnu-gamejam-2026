@@ -3,13 +3,9 @@ using UnityEngine;
 
 public class MelodyResponseQuest : InteractionCheckpoint
 {
-    public override void TryInteract()
+    public override void Interact()
     {
-        if (VerifyInteraction())
-        {
-            Debug.Log("MelodyResponseQuest");   
-            MarkInteractionComplete();
-        }
-        
+        Debug.Log("MelodyResponseQuest");
+        MarkInteractionComplete();
     }
 }
