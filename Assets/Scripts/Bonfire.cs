@@ -1,15 +1,13 @@
+using System;
 using UnityEngine;
 
 public class Bonfire : MonoBehaviour
 {
     public int 初始光照级别 = 2;
-    public int 步长 = 3;
-    private int _光照级别;
+    public int 光照级别 { get; private set; }
     
-    void Start() => _光照级别 = 初始光照级别;
+    public Bonfire instance { get; private set; }
     
-    public int GetLightValue() => _光照级别;
-    public void AddWood(int count) => _光照级别 += count * 步长;
-    // public void increaseFire(int count) => _光照级别 += count;
-    public void DecreaseFire(int count) => _光照级别 -= count;
+    private void Awake() => instance = this;
+    void Start() => 光照级别 = 初始光照级别;
 }
