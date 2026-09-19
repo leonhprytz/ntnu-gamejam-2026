@@ -14,6 +14,9 @@ public class QuestManager : MonoBehaviour
 
     public event Action<int> LightValueChanged;
 
+    public BonfireManager bonfireManager;
+
+
     void OnEnable()
     {
         if(QuestManager.instance == null)
@@ -54,6 +57,7 @@ public class QuestManager : MonoBehaviour
         {
             lightValue -= questline.lightValueLose;
         }
+        bonfireManager.increaseBonfireSize();
     }
 
 }
