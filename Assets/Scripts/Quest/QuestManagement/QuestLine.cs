@@ -19,7 +19,6 @@ public class QuestLine : Interactable
     [Header("npc settings")]
     public bool spawnsNPC;
     public GameObject npcToSpawn;
-    public Transform startPoint;
 
 
     

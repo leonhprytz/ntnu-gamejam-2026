@@ -175,7 +175,6 @@ GameObject:
   m_Component:
   - component: {fileID: 721033513}
   - component: {fileID: 721033512}
-  - component: {fileID: 721033514}
   m_Layer: 0
   m_Name: NPC1
   m_TagString: Untagged
@@ -258,19 +257,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &721033514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721033511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f377838b80336d4cb72c3cd42745040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractionCheckpoint
-  interactionCompleted: 0
 --- !u!1 &1005270709
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,17 +539,6 @@ Transform:
   - {fileID: 1815488204}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1620445368 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7013522983558394130, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
-  m_PrefabInstance: {fileID: 3885794948242246567}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f377838b80336d4cb72c3cd42745040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractionCheckpoint
 --- !u!1 &1815488203
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,9 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestLine
   questName: FirstQuestTest
-  interactionCheckpoints:
-  - {fileID: 721033514}
-  - {fileID: 1620445368}
+  interactionCheckpoints: []
   lightValueToStartQuestLine: 0
   spawnsNPC: 0
   npcToSpawn: {fileID: 0}

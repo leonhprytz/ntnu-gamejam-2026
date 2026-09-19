@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5478252711044751940}
   - component: {fileID: 5062482056054078235}
-  - component: {fileID: 7013522983558394130}
   - component: {fileID: 2994312719847925240}
   - component: {fileID: 473158519692631924}
   m_Layer: 0
@@ -95,19 +94,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &7013522983558394130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383550599321744476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f377838b80336d4cb72c3cd42745040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractionCheckpoint
-  interactionCompleted: 0
 --- !u!114 &2994312719847925240
 MonoBehaviour:
   m_ObjectHideFlags: 0

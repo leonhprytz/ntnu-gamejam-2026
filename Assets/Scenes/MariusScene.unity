@@ -11653,6 +11653,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1383550599321744476, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1664527539}
+    - targetCorrespondingSourceObject: {fileID: 1383550599321744476, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1664527540}
   m_SourcePrefab: {fileID: 100100000, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
 --- !u!1 &1105280373
 GameObject:
@@ -11860,6 +11863,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!4 &1374913826 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3046908809254805652, guid: 011b7a4c8f6dfbb479adeffd25082144, type: 3}
+  m_PrefabInstance: {fileID: 8480494733100408488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1472119027
 GameObject:
   m_ObjectHideFlags: 0
@@ -12079,6 +12087,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6349b807e78aff047aa84a4541ded231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractionManager
+  player: {fileID: 1374913826}
+  IsBusy: 0
 --- !u!4 &1581177798
 Transform:
   m_ObjectHideFlags: 0
@@ -12112,7 +12122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayGuitarQuest
   interactionCompleted: 0
-  questLine: {fileID: 1664527538}
 --- !u!114 &1664527538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12125,17 +12134,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad643d670c1b394bb7aad9721c3bfb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestLine
+  priority: 0
   questName: GuitarPlayer
   interactionCheckpoints:
   - {fileID: 1664527532}
   - {fileID: 1664527539}
-  interactionsCompleted: 
   lightValueToStartQuestLine: 0
   lightValueWin: 0
   lightValueLose: 0
   spawnsNPC: 0
   npcToSpawn: {fileID: 0}
-  startPoint: {fileID: 0}
   questLineWon: 0
 --- !u!114 &1664527539
 MonoBehaviour:
@@ -12150,7 +12158,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MelodyResponseQuest
   interactionCompleted: 0
-  questLine: {fileID: 1664527538}
+--- !u!58 &1664527540
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664527531}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.54
 --- !u!1 &1765725363
 GameObject:
   m_ObjectHideFlags: 0
@@ -12323,15 +12366,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad643d670c1b394bb7aad9721c3bfb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestLine
+  priority: 0
   questName: ListenToGuitar
   interactionCheckpoints: []
-  interactionsCompleted: 
   lightValueToStartQuestLine: 10
   lightValueWin: 0
   lightValueLose: 0
   spawnsNPC: 1
   npcToSpawn: {fileID: 0}
-  startPoint: {fileID: 1994241350}
   questLineWon: 0
 --- !u!1 &1994241350
 GameObject:
