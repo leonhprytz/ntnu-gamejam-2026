@@ -16,6 +16,7 @@
 /[Pp]roject[Ss]ettings/[Pp]ackages/com.unity.learn.iet-framework/
 *.log
 .gitconfig
+.idea
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
 *.blend1
