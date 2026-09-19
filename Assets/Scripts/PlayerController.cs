@@ -165,7 +165,6 @@ public class PlayerController : MonoBehaviour
 
         Vector2 pos = new Vector2(this.transform.position.x, this.transform.position.y);
         rb.MovePosition(pos + Time.deltaTime * dv * moveSpeed);
-        print((int)md);
         animator.SetInteger("moveDirection", (int)md);
     }
 
