@@ -12276,8 +12276,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4619ddaf1fe1941a7b6d375de701f08d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: "Assembly-CSharp::Ba\u030Al"
+  m_EditorClassIdentifier: Assembly-CSharp::BonfireManager
   fireController: {fileID: 2022259894}
+  _size: 0
 --- !u!1 &1765725363
 GameObject:
   m_ObjectHideFlags: 0
@@ -12680,7 +12681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65e324250c34240299320572ac30513e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaalController
-  state: 0
+  fireSize: 0
   radii:
   - 1.85
   - 3.2
