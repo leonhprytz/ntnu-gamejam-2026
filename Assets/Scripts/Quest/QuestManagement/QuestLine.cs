@@ -7,9 +7,12 @@ using UnityEngine;
 public class QuestLine : Interactable
 {
     public string questName;
-    public InteractionCheckpoint[] interactionCheckpoints;
+    public QuestStep[] steps;
 
-    private int currentInteractionCheckpointIndex = 0;
+    [Tooltip("Optional: found among this NPC's children when left empty.")]
+    public DialogueInteraction dialogue;
+
+    private int currentStepIndex = 0;
 
     [Header("light value settings")]
     public int lightValueToStartQuestLine;
@@ -34,14 +37,21 @@ public class QuestLine : Interactable
 
     void Start()
     {
-        // interactionsCompleted = new List<bool>();
+        if (dialogue == null)
+        {
+            dialogue = GetComponentInChildren<DialogueInteraction>(true);
+        }
 
         QuestManager.instance.LightValueChanged += OnLightValueChanged;
-        for(int i = 0; i < interactionCheckpoints.Length; i++)
+        for(int i = 0; i < steps.Length; i++)
         {
-            interactionCheckpoints[i].setQuestLine(this);
-            interactionCheckpoints[i].interactionCompletedEvent += MarkInteractionComplete;
-            // interactionsCompleted.Add(false);
+            if (steps[i].IsDialogue || steps[i].logic == null)
+            {
+                continue;
+            }
+
+            steps[i].logic.setQuestLine(this);
+            steps[i].logic.interactionCompletedEvent += MarkInteractionComplete;
         }
 
         // LightValueChanged only fires on a change, so a questline whose
@@ -54,9 +64,49 @@ public class QuestLine : Interactable
         // Decline the press rather than swallowing it, so a finished or
         // not-yet-available questline doesn't block whatever else is in range.
         if (!questLineStarted) return false;
-        if (currentInteractionCheckpointIndex >= interactionCheckpoints.Length) return false;
 
-        interactionCheckpoints[currentInteractionCheckpointIndex].Interact();
+        // Mid-conversation the press means "next line", not "next step".
+        if (dialogue != null && dialogue.IsPlaying)
+        {
+            dialogue.Advance();
+            return true;
+        }
+
+        if (currentStepIndex >= steps.Length)
+        {
+            // Finished, but the closing line is still up: dismiss it and still
+            // decline, so whatever else is in range gets the press next time.
+            if (dialogue != null)
+            {
+                dialogue.Hide();
+            }
+
+            return false;
+        }
+
+        QuestStep step = steps[currentStepIndex];
+
+        if (step.IsDialogue)
+        {
+            if (dialogue == null)
+            {
+                Debug.LogWarning(questName + " has a dialogue step but no DialogueInteraction in its children.");
+                return false;
+            }
+
+            dialogue.Play(step.lines, CompleteCurrentStep);
+            return true;
+        }
+
+        if (step.logic == null) return false;
+
+        // Clear the last step's line so it isn't left hanging over the logic.
+        if (dialogue != null)
+        {
+            dialogue.Hide();
+        }
+
+        step.logic.Interact();
         return true;
     }
     public void StartQuestLine()
@@ -73,28 +123,26 @@ public class QuestLine : Interactable
         // Only the step the questline is currently on may advance the cursor.
         // TryInteract can no longer drive the wrong step, but a checkpoint can
         // still self-complete via its public interactionCompleted flag.
-        if (Array.IndexOf(interactionCheckpoints, interactionCheckpoint) != currentInteractionCheckpointIndex)
+        if (currentStepIndex >= steps.Length) return;
+        if (steps[currentStepIndex].logic != interactionCheckpoint) return;
+
+        Debug.Log("interaction " + interactionCheckpoint.name + " have been completed");
+        CompleteCurrentStep();
+    }
+
+    // Shared by both step kinds: logic steps arrive here via their completion
+    // event, dialogue steps via the callback fired on their last line.
+    private void CompleteCurrentStep()
+    {
+        currentStepIndex++;
+
+        if (currentStepIndex < steps.Length)
         {
             return;
         }
 
-        Debug.Log("interaction " + interactionCheckpoint.name + " have been completed");
-        currentInteractionCheckpointIndex ++;
-
-        // if(interactionsCompleted[index] == false)
-        // {
-        //     MarkQuestlineComplete(index);
-        // }
-        if (currentInteractionCheckpointIndex == interactionCheckpoints.Length)
-        {
-            MarkQuestlineComplete();
-        }
-        
-    }
-
-    private void MarkQuestlineComplete()
-    {
-        // interactionsCompleted[index] = true;
+        // The box isn't hidden here: a closing dialogue step should stay
+        // readable until the player presses interact again.
         questlineCompletedEvent?.Invoke(this);
     }
 
