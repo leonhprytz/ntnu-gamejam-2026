@@ -11717,6 +11717,7 @@ MonoBehaviour:
   questlines:
   - {fileID: 1939425245}
   lightValue: 0
+  prevLightValue: 0
 --- !u!4 &1472119029
 Transform:
   m_ObjectHideFlags: 0
@@ -12049,8 +12050,8 @@ MonoBehaviour:
   interactionCheckpoints: []
   lightValueToStartQuestLine: 10
   spawnsNPC: 1
-  npcToSpawn: {fileID: 0}
-  startPoint: {fileID: 1994241350}
+  npcToSpawn: {fileID: 1383550599321744476, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+  startPoint: {fileID: 1994241351}
   relatedNPCs: []
   interactionsCompleted: 0
 --- !u!1 &1994241350

@@ -4,14 +4,15 @@ using UnityEngine;
 public class QuestManager : MonoBehaviour
 {
 
-    public static QuestManager instance;
+    public static QuestManager instance = null;
     public QuestLine[] questlines;
 
     public int lightValue;
-    private int prevLightValue;
+    public int prevLightValue;
 
     public event Action<int> LightValueChanged;
-    void onAwake()
+
+    void OnEnable()
     {
         if(QuestManager.instance == null)
         {
@@ -21,6 +22,7 @@ public class QuestManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        prevLightValue = lightValue;
         for(int i = 0; i < questlines.Length; i++)
         {
             questlines[i].questlineCompletedEvent += QuestlineCompleted;

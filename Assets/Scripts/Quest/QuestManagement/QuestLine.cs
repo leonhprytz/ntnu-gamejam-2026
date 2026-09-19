@@ -12,7 +12,7 @@ public class QuestLine : MonoBehaviour
     public int lightValueToStartQuestLine;
     public bool spawnsNPC;
     public GameObject npcToSpawn;
-    public GameObject startPoint;
+    public Transform startPoint;
 
     public GameObject[] relatedNPCs;
 
@@ -26,7 +26,7 @@ public class QuestLine : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        QuestManager.instance.LightValueChanged += OnLightValueChanged;
         for(int i = 0; i < interactionCheckpoints.Length; i++)
         {
             interactionCheckpoints[i].interactionCompletedEvent += MarkInteractionComplete;
@@ -35,9 +35,10 @@ public class QuestLine : MonoBehaviour
 
     public void StartQuestLine()
     {
+        Debug.Log("questline started");
         if(npcToSpawn != null)
         {
-            Instantiate(npcToSpawn, this.transform);
+            Instantiate(npcToSpawn, startPoint);
         }
     }
 
@@ -60,6 +61,7 @@ public class QuestLine : MonoBehaviour
 
     void OnLightValueChanged(int currentLightValue)
     {
+        Debug.Log("lightValueChanged: " + currentLightValue);
         if (questLineStarted)
         {
             return;
