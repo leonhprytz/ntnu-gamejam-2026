@@ -15,6 +15,8 @@ public class NPCMovement : MonoBehaviour
 
     public WhenToPlay whenToPlay;
 
+    public InteractionCheckpoint interactionCheckpoint;
+
     private Rigidbody2D rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,8 +28,20 @@ public class NPCMovement : MonoBehaviour
         {
             StartCoroutine(PlayMovement());
         }
+        else
+        {
+            interactionCheckpoint.interactionCompletedEvent += StartMovement;
+        }
     }
 
+    private void StartMovement()
+    {
+        StartCoroutine(PlayMovement());
+    }
+    private void StartMovement(InteractionCheckpoint interactionCheckpoint)
+    {
+        StartCoroutine(PlayMovement());
+    }
     private IEnumerator PlayMovement()
     {
         for(int i = 0; i < movementPoints.Length; i++)
