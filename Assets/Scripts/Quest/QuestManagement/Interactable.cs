@@ -5,6 +5,44 @@ public abstract class Interactable : MonoBehaviour
     [Tooltip("Per-instance tiebreak, added on top of the type's base priority.")]
     public int priority;
 
+    private bool _isInRange = false;
+    public bool isInRange
+    {
+        get => _isInRange;
+        set
+        {
+            _isInRange = value;
+            if (!active)
+                return;
+
+            if (isInRange)
+            {
+                InteractionManager.instance.addAvailableInteraction(this);
+            }
+            else
+            {
+                InteractionManager.instance.removeAvailableInteraction(this);
+            }
+        }
+    }
+    private bool _active;
+    public bool active
+    {
+        get => _active;
+        set
+        {
+            _active = value;
+            if (!active)
+            {
+                InteractionManager.instance.removeAvailableInteraction(this);
+            }
+            else if (isInRange)
+            {
+                InteractionManager.instance.addAvailableInteraction(this);
+            }
+        }
+    }
+
     // Questlines override this so they always outrank scenery.
     public virtual int BasePriority => 0;
 
@@ -17,21 +55,22 @@ public abstract class Interactable : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player"))
-        {
             return;
-        }
 
-        InteractionManager.instance.addAvailableInteraction(this);
+        isInRange = true;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         if (!other.CompareTag("Player"))
-        {
             return;
-        }
 
-        InteractionManager.instance.removeAvailableInteraction(this);
+        isInRange = false;
+    }
+
+    void OnValidate()
+    {
+        active = _active;
     }
 
     void OnDisable()

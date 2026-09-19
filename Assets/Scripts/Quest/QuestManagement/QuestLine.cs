@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -23,9 +22,6 @@ public class QuestLine : Interactable
     public bool spawnsNPC;
     public GameObject npcToSpawn;
 
-
-    
-
     public event Action<QuestLine> questlineCompletedEvent;
     private bool questLineStarted = false;
     public bool questLineWon;
@@ -33,7 +29,6 @@ public class QuestLine : Interactable
     // Questlines outrank scenery, so walking up to an NPC standing next to a
     // tree always talks to the NPC.
     public override int BasePriority => 100;
-
 
     void Start()
     {
@@ -43,7 +38,7 @@ public class QuestLine : Interactable
         }
 
         QuestManager.instance.LightValueChanged += OnLightValueChanged;
-        for(int i = 0; i < steps.Length; i++)
+        for (int i = 0; i < steps.Length; i++)
         {
             if (steps[i].IsDialogue || steps[i].logic == null)
             {
@@ -63,7 +58,8 @@ public class QuestLine : Interactable
     {
         // Decline the press rather than swallowing it, so a finished or
         // not-yet-available questline doesn't block whatever else is in range.
-        if (!questLineStarted) return false;
+        if (!questLineStarted)
+            return false;
 
         // Mid-conversation the press means "next line", not "next step".
         if (dialogue != null && dialogue.IsPlaying)
@@ -90,7 +86,9 @@ public class QuestLine : Interactable
         {
             if (dialogue == null)
             {
-                Debug.LogWarning(questName + " has a dialogue step but no DialogueInteraction in its children.");
+                Debug.LogWarning(
+                    questName + " has a dialogue step but no DialogueInteraction in its children."
+                );
                 return false;
             }
 
@@ -98,7 +96,8 @@ public class QuestLine : Interactable
             return true;
         }
 
-        if (step.logic == null) return false;
+        if (step.logic == null)
+            return false;
 
         // Clear the last step's line so it isn't left hanging over the logic.
         if (dialogue != null)
@@ -109,10 +108,11 @@ public class QuestLine : Interactable
         step.logic.Interact();
         return true;
     }
+
     public void StartQuestLine()
     {
         Debug.Log("questline started");
-        if(npcToSpawn != null)
+        if (npcToSpawn != null)
         {
             npcToSpawn.SetActive(true);
         }
@@ -123,8 +123,10 @@ public class QuestLine : Interactable
         // Only the step the questline is currently on may advance the cursor.
         // TryInteract can no longer drive the wrong step, but a checkpoint can
         // still self-complete via its public interactionCompleted flag.
-        if (currentStepIndex >= steps.Length) return;
-        if (steps[currentStepIndex].logic != interactionCheckpoint) return;
+        if (currentStepIndex >= steps.Length)
+            return;
+        if (steps[currentStepIndex].logic != interactionCheckpoint)
+            return;
 
         Debug.Log("interaction " + interactionCheckpoint.name + " have been completed");
         CompleteCurrentStep();
@@ -145,7 +147,12 @@ public class QuestLine : Interactable
                 branches.Select(b => b.option).ToArray(),
                 // Picking an alternative counts as the press that plays the
                 // step it leads to, so the box doesn't sit there waiting.
-                chosen => { GoToStep(branches[chosen].targetStep); TryInteract(); });
+                chosen =>
+                {
+                    GoToStep(branches[chosen].targetStep);
+                    TryInteract();
+                }
+            );
             return;
         }
 
@@ -158,6 +165,7 @@ public class QuestLine : Interactable
 
         if (currentStepIndex < steps.Length)
         {
+            active = false; // completed deactivate
             return;
         }
 
@@ -166,7 +174,6 @@ public class QuestLine : Interactable
         questlineCompletedEvent?.Invoke(this);
     }
 
-
     void OnLightValueChanged(int currentLightValue)
     {
         if (questLineStarted)
@@ -174,11 +181,10 @@ public class QuestLine : Interactable
             return;
         }
 
-        if(currentLightValue >= lightValueToStartQuestLine)
+        if (currentLightValue >= lightValueToStartQuestLine)
         {
             StartQuestLine();
             questLineStarted = true;
         }
     }
-    
 }

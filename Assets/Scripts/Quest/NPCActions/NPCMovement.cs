@@ -15,18 +15,21 @@ public class NPCMovement : MonoBehaviour
                 return;
             _md = value;
 
-            Animator animator = GetComponent<Animator>();
-            animator?.SetInteger("moveDirection", (int)animationMoveDirection);
+            //Animator animator = GetComponent<Animator>();
+            //animator?.SetInteger("moveDirection", (int)animationMoveDirection);
         }
     }
+
+    public Interactable interactableToActivateOnEnd;
 
     public enum WhenToPlay
     {
         onStart,
         afterInteraction,
+
         // Doesn't start on its own: an interaction runs PlayMovement and waits
         // for it, so it can do something else once the NPC has arrived.
-        onCue
+        onCue,
     }
 
     public float movementSpeed;
@@ -47,7 +50,7 @@ public class NPCMovement : MonoBehaviour
         {
             StartCoroutine(PlayMovement());
         }
-        else if(whenToPlay == WhenToPlay.afterInteraction)
+        else if (whenToPlay == WhenToPlay.afterInteraction)
         {
             interactionCheckpoint.interactionCompletedEvent += StartMovement;
         }
@@ -62,11 +65,19 @@ public class NPCMovement : MonoBehaviour
     {
         StartCoroutine(PlayMovement());
     }
+
     public IEnumerator PlayMovement()
     {
+        print(movementPoints.Length);
         for (int i = 0; i < movementPoints.Length; i++)
         {
+            print(i);
             yield return StartCoroutine(GoToPoint(i));
+        }
+
+        if (interactableToActivateOnEnd)
+        {
+            interactableToActivateOnEnd.active = true;
         }
     }
 
@@ -105,7 +116,7 @@ public class NPCMovement : MonoBehaviour
         Vector2 point = movementPoints[index].position;
 
         animationMoveDirection = calculateAnimationMoveDirection(point - rb.position);
-        while ((point - rb.position).magnitude > 0.1)
+        while ((point - rb.position).magnitude > 0.01)
         {
             Vector2 movementVector = point - rb.position;
             Vector2 moveDir = movementVector.normalized * movementSpeed * Time.fixedDeltaTime;
