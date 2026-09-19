@@ -4,6 +4,22 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class NPCMovement : MonoBehaviour
 {
+    private MoveDirection _md;
+    private MoveDirection animationMoveDirection
+    {
+        get { return _md; }
+        set
+        {
+            bool update = _md != value;
+            if (!update)
+                return;
+            _md = value;
+
+            Animator animator = GetComponent<Animator>();
+            animator?.SetInteger("moveDirection", (int)animationMoveDirection);
+        }
+    }
+
     public enum WhenToPlay
     {
         onStart,
@@ -27,7 +43,7 @@ public class NPCMovement : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody2D>();
 
-        if(whenToPlay == WhenToPlay.onStart)
+        if (whenToPlay == WhenToPlay.onStart)
         {
             StartCoroutine(PlayMovement());
         }
@@ -41,31 +57,58 @@ public class NPCMovement : MonoBehaviour
     {
         StartCoroutine(PlayMovement());
     }
+
     private void StartMovement(InteractionCheckpoint interactionCheckpoint)
     {
         StartCoroutine(PlayMovement());
     }
     public IEnumerator PlayMovement()
     {
-        for(int i = 0; i < movementPoints.Length; i++)
+        for (int i = 0; i < movementPoints.Length; i++)
         {
             yield return StartCoroutine(GoToPoint(i));
         }
+    }
 
+    private MoveDirection calculateAnimationMoveDirection(Vector2 vector)
+    {
+        MoveDirection best = MoveDirection.None;
+        float score = 0;
 
+        float dot;
+        if ((dot = Vector2.Dot(vector, Vector2.up)) > score)
+        {
+            best = MoveDirection.Up;
+            score = dot;
+        }
+        if ((dot = Vector2.Dot(vector, Vector2.right)) > score)
+        {
+            best = MoveDirection.Right;
+            score = dot;
+        }
+        if ((dot = Vector2.Dot(vector, Vector2.down)) > score)
+        {
+            best = MoveDirection.Down;
+            score = dot;
+        }
+        if ((dot = Vector2.Dot(vector, Vector2.left)) > score)
+        {
+            best = MoveDirection.Left;
+            score = dot;
+        }
+
+        return best;
     }
 
     private IEnumerator GoToPoint(int index)
     {
         Vector2 point = movementPoints[index].position;
 
-        while( (point - rb.position).magnitude > 0.1)
+        animationMoveDirection = calculateAnimationMoveDirection(point - rb.position);
+        while ((point - rb.position).magnitude > 0.1)
         {
-
             Vector2 movementVector = point - rb.position;
-            Vector2 moveDir = movementVector.normalized * 
-                movementSpeed *
-                Time.fixedDeltaTime;
+            Vector2 moveDir = movementVector.normalized * movementSpeed * Time.fixedDeltaTime;
 
             rb.MovePosition(rb.position + moveDir);
 
@@ -73,6 +116,6 @@ public class NPCMovement : MonoBehaviour
         }
 
         rb.MovePosition(point);
+        animationMoveDirection = MoveDirection.None;
     }
-
 }
