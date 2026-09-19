@@ -134,7 +134,27 @@ public class QuestLine : Interactable
     // event, dialogue steps via the callback fired on their last line.
     private void CompleteCurrentStep()
     {
-        currentStepIndex++;
+        QuestStep step = currentStepIndex < steps.Length ? steps[currentStepIndex] : null;
+
+        // A branching step doesn't advance on its own: the box puts the
+        // alternatives up and hands back the one the player picked.
+        if (step != null && step.HasBranches && dialogue != null)
+        {
+            QuestBranch[] branches = step.branches;
+            dialogue.AskChoice(
+                branches.Select(b => b.option).ToArray(),
+                // Picking an alternative counts as the press that plays the
+                // step it leads to, so the box doesn't sit there waiting.
+                chosen => { GoToStep(branches[chosen].targetStep); TryInteract(); });
+            return;
+        }
+
+        GoToStep(currentStepIndex + 1);
+    }
+
+    private void GoToStep(int stepIndex)
+    {
+        currentStepIndex = Mathf.Clamp(stepIndex, 0, steps.Length);
 
         if (currentStepIndex < steps.Length)
         {

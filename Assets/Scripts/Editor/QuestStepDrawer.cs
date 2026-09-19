@@ -11,19 +11,23 @@ public class QuestStepDrawer : PropertyDrawer
         EditorGUI.BeginProperty(position, label, property);
 
         SerializedProperty kind = property.FindPropertyRelative("kind");
-        SerializedProperty body = BodyOf(property, kind);
 
-        Rect kindRect = new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
-        EditorGUI.PropertyField(kindRect, kind, label);
-
-        Rect bodyRect = new Rect(
-            position.x,
-            kindRect.yMax + EditorGUIUtility.standardVerticalSpacing,
-            position.width,
-            EditorGUI.GetPropertyHeight(body, true));
+        Rect rect = new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
+        EditorGUI.PropertyField(rect, kind, label);
 
         EditorGUI.indentLevel++;
-        EditorGUI.PropertyField(bodyRect, body, true);
+
+        foreach (SerializedProperty body in BodiesOf(property, kind))
+        {
+            rect = new Rect(
+                position.x,
+                rect.yMax + EditorGUIUtility.standardVerticalSpacing,
+                position.width,
+                EditorGUI.GetPropertyHeight(body, true));
+
+            EditorGUI.PropertyField(rect, body, true);
+        }
+
         EditorGUI.indentLevel--;
 
         EditorGUI.EndProperty();
@@ -32,16 +36,29 @@ public class QuestStepDrawer : PropertyDrawer
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
         SerializedProperty kind = property.FindPropertyRelative("kind");
+        float height = EditorGUIUtility.singleLineHeight;
 
-        return EditorGUIUtility.singleLineHeight
-            + EditorGUIUtility.standardVerticalSpacing
-            + EditorGUI.GetPropertyHeight(BodyOf(property, kind), true);
+        foreach (SerializedProperty body in BodiesOf(property, kind))
+        {
+            height += EditorGUIUtility.standardVerticalSpacing + EditorGUI.GetPropertyHeight(body, true);
+        }
+
+        return height;
     }
 
-    private static SerializedProperty BodyOf(SerializedProperty property, SerializedProperty kind)
+    // A dialogue step also offers branching, so it draws two fields; a logic
+    // step is still just its object slot.
+    private static SerializedProperty[] BodiesOf(SerializedProperty property, SerializedProperty kind)
     {
-        return kind.enumValueIndex == (int)QuestStepKind.Dialogue
-            ? property.FindPropertyRelative("lines")
-            : property.FindPropertyRelative("logic");
+        if (kind.enumValueIndex == (int)QuestStepKind.Dialogue)
+        {
+            return new[]
+            {
+                property.FindPropertyRelative("lines"),
+                property.FindPropertyRelative("branches"),
+            };
+        }
+
+        return new[] { property.FindPropertyRelative("logic") };
     }
 }

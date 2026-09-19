@@ -17,6 +17,8 @@ public class DialogueInteraction : MonoBehaviour
     private string[] lines;
     private int index;
     private Action onFinished;
+    private string[] choices;
+    private Action<int> onChosen;
     private Coroutine typeRoutine;
     private bool typing;
     private int lineStartFrame;
@@ -37,6 +39,14 @@ public class DialogueInteraction : MonoBehaviour
 
     void Update()
     {
+        // While alternatives are up the box waits for a number key instead; the
+        // interact button is left alone so it can't pick one by accident.
+        if (choices != null)
+        {
+            PollChoice();
+            return;
+        }
+
         // A press mid-type snaps the line to full. The InteractionManager is
         // busy while typing, so this is the only thing that sees that press.
         if (!typing || interactAction == null)
@@ -86,11 +96,32 @@ public class DialogueInteraction : MonoBehaviour
         StartLine();
     }
 
+    // Called by the questline when the finished step branches. Keeps IsPlaying
+    // set so interact presses stay with the box until an alternative is picked.
+    public void AskChoice(string[] options, Action<int> chosenCallback)
+    {
+        choices = options;
+        onChosen = chosenCallback;
+        IsPlaying = true;
+
+        if (canvas != null)
+        {
+            canvas.enabled = true;
+        }
+
+        for (int i = 0; i < options.Length; i++)
+        {
+            textComponent.text += "\n" + (i + 1) + ") " + options[i];
+        }
+    }
+
     public void Hide()
     {
         StopTyping();
         IsPlaying = false;
         onFinished = null;
+        choices = null;
+        onChosen = null;
 
         if (textComponent != null)
         {
@@ -145,6 +176,30 @@ public class DialogueInteraction : MonoBehaviour
         Action callback = onFinished;
         onFinished = null;
         callback?.Invoke();
+    }
+
+    void PollChoice()
+    {
+        Keyboard keyboard = Keyboard.current;
+
+        if (keyboard == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < choices.Length && i < 9; i++)
+        {
+            if (keyboard[(Key)((int)Key.Digit1 + i)].wasPressedThisFrame)
+            {
+                choices = null;
+
+                Action<int> callback = onChosen;
+                onChosen = null;
+                IsPlaying = false;
+                callback?.Invoke(i);
+                return;
+            }
+        }
     }
 
     void StopTyping()
