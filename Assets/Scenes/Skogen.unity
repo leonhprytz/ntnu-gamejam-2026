@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &70733317
+--- !u!1 &163403962
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,165 +127,127 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 70733318}
-  - component: {fileID: 70733319}
+  - component: {fileID: 163403964}
+  - component: {fileID: 163403963}
   m_Layer: 0
-  m_Name: ShadowMap
+  m_Name: GuitarAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &70733318
+  m_IsActive: 0
+--- !u!82 &163403963
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163403962}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: bfbda761660404bbda5146844d499ad3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 12
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.99050903
+      value: 0
+      inSlope: -0.028470956
+      outSlope: -0.028470956
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.6810584
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &163403964
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70733317}
+  m_GameObject: {fileID: 163403962}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 713007777}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &70733319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70733317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.ShadowCaster2D
-  m_ShadowGroup: 0
-  m_Priority: 0
-  m_ComponentVersion: 6
-  m_HasRenderer: 0
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_AlphaCutoff: 0.1
-  m_ApplyToSortingLayers: 6b63ef01i
-  m_ShapePath:
-  - {x: -0.22037521, y: -0.46959078, z: 0}
-  - {x: -0.3427184, y: -0.28053287, z: 0}
-  - {x: -0.18791018, y: -0.22019647, z: 0}
-  - {x: 0.18636487, y: -0.21962419, z: 0}
-  - {x: 0.34227967, y: -0.2796936, z: 0}
-  - {x: 0.21892598, y: -0.46843946, z: 0}
-  m_ShapePathHash: 999611514
-  m_InstanceId: 0
-  m_ShadowShape2DComponent: {fileID: 0}
-  m_ShadowShape2DProvider:
-    rid: -2
-  m_ShadowCastingSource: 1
-  m_ShadowMesh:
-    rid: 8638788533518336010
-  m_CastingOption: 1
-  m_PreviousTrimEdge: 0
-  m_PreviousEdgeProcessing: 1
-  m_PreviousShadowCastingSource: 1
-  m_PreviousShadowShape2DSource: {fileID: 0}
-  m_PreviousShadowShape2DProviderHash: 0
-  m_SelectionSources:
-    rid: 8638788533518336011
-  references:
-    version: 2
-    RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 8638788533518336010
-      type: {class: ShadowMesh2D, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data:
-        m_Vertices:
-        - position: {x: -0.22037521, y: -0.46959078, z: 0}
-          tangent: {x: -1, y: 0, z: -0.3427184, w: -0.28053287}
-        - position: {x: -0.3427184, y: -0.28053287, z: 0}
-          tangent: {x: -1, y: 0, z: -0.18791018, w: -0.22019647}
-        - position: {x: -0.18791018, y: -0.22019647, z: 0}
-          tangent: {x: -1, y: 0, z: 0.18636487, w: -0.21962419}
-        - position: {x: 0.18636487, y: -0.21962419, z: 0}
-          tangent: {x: -1, y: 0, z: 0.34227967, w: -0.2796936}
-        - position: {x: 0.34227967, y: -0.2796936, z: 0}
-          tangent: {x: -1, y: 0, z: 0.21892598, w: -0.46843946}
-        - position: {x: 0.21892598, y: -0.46843946, z: 0}
-          tangent: {x: -1, y: 0, z: -0.22037521, w: -0.46959078}
-        - position: {x: 0.21892598, y: -0.46843946, z: 0}
-          tangent: {x: 0, y: 0, z: -0.22037521, w: -0.46959078}
-        - position: {x: -0.22037521, y: -0.46959078, z: 0}
-          tangent: {x: 0, y: 0, z: 0.21892598, w: -0.46843946}
-        - position: {x: 0.21892598, y: -0.46843946, z: 0}
-          tangent: {x: 1, y: 0, z: 0.34227967, w: -0.2796936}
-        - position: {x: 0.21892598, y: -0.46843946, z: 0}
-          tangent: {x: 3, y: 0, z: -0.3427184, w: -0.28053287}
-        - position: {x: -0.22037521, y: -0.46959078, z: 0}
-          tangent: {x: 0, y: 0, z: -0.3427184, w: -0.28053287}
-        - position: {x: -0.3427184, y: -0.28053287, z: 0}
-          tangent: {x: 0, y: 0, z: -0.22037521, w: -0.46959078}
-        - position: {x: -0.22037521, y: -0.46959078, z: 0}
-          tangent: {x: 1, y: 0, z: 0.21892598, w: -0.46843946}
-        - position: {x: -0.22037521, y: -0.46959078, z: 0}
-          tangent: {x: 3, y: 0, z: -0.18791018, w: -0.22019647}
-        - position: {x: -0.3427184, y: -0.28053287, z: 0}
-          tangent: {x: 0, y: 0, z: -0.18791018, w: -0.22019647}
-        - position: {x: -0.18791018, y: -0.22019647, z: 0}
-          tangent: {x: 0, y: 0, z: -0.3427184, w: -0.28053287}
-        - position: {x: -0.3427184, y: -0.28053287, z: 0}
-          tangent: {x: 1, y: 0, z: -0.22037521, w: -0.46959078}
-        - position: {x: -0.3427184, y: -0.28053287, z: 0}
-          tangent: {x: 3, y: 0, z: 0.18636487, w: -0.21962419}
-        - position: {x: -0.18791018, y: -0.22019647, z: 0}
-          tangent: {x: 0, y: 0, z: 0.18636487, w: -0.21962419}
-        - position: {x: 0.18636487, y: -0.21962419, z: 0}
-          tangent: {x: 0, y: 0, z: -0.18791018, w: -0.22019647}
-        - position: {x: -0.18791018, y: -0.22019647, z: 0}
-          tangent: {x: 1, y: 0, z: -0.3427184, w: -0.28053287}
-        - position: {x: -0.18791018, y: -0.22019647, z: 0}
-          tangent: {x: 3, y: 0, z: 0.34227967, w: -0.2796936}
-        - position: {x: 0.18636487, y: -0.21962419, z: 0}
-          tangent: {x: 0, y: 0, z: 0.34227967, w: -0.2796936}
-        - position: {x: 0.34227967, y: -0.2796936, z: 0}
-          tangent: {x: 0, y: 0, z: 0.18636487, w: -0.21962419}
-        - position: {x: 0.18636487, y: -0.21962419, z: 0}
-          tangent: {x: 1, y: 0, z: -0.18791018, w: -0.22019647}
-        - position: {x: 0.18636487, y: -0.21962419, z: 0}
-          tangent: {x: 3, y: 0, z: 0.21892598, w: -0.46843946}
-        - position: {x: 0.34227967, y: -0.2796936, z: 0}
-          tangent: {x: 0, y: 0, z: 0.21892598, w: -0.46843946}
-        - position: {x: 0.21892598, y: -0.46843946, z: 0}
-          tangent: {x: 0, y: 0, z: 0.34227967, w: -0.2796936}
-        - position: {x: 0.34227967, y: -0.2796936, z: 0}
-          tangent: {x: 1, y: 0, z: 0.18636487, w: -0.21962419}
-        - position: {x: 0.34227967, y: -0.2796936, z: 0}
-          tangent: {x: 3, y: 0, z: -0.22037521, w: -0.46959078}
-        m_Indices: 050000000600000007000000070000000000000005000000000000000a0000000b0000000b0000000100000000000000010000000e0000000f0000000f0000000200000001000000020000001200000013000000130000000300000002000000030000001600000017000000170000000400000003000000040000001a0000001b0000001b0000000500000004000000050000000800000009000000000000000c0000000d000000010000001000000011000000020000001400000015000000030000001800000019000000040000001c0000001d000000i
-        m_IsTransformable: 1
-        m_LocalBounds:
-          m_Center: {x: -0.0002193749, y: -0.34460747, z: 0}
-          m_Extent: {x: 0.34249902, y: 0.124983296, z: 0}
-        m_EdgeProcessing: 1
-        m_TrimEdge: 0
-        m_FlipX: 0
-        m_FlipY: 0
-        m_InitialTrim: 0
-    - rid: 8638788533518336011
-      type: {class: Shadow2DProviderSources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data:
-        m_SelectedHashCode: 0
-        m_SelectedSource:
-          rid: -2
-        m_Provider2DCache:
-          rid: 8638788533518336012
-    - rid: 8638788533518336012
-      type: {class: 'Provider2DCache`1[[UnityEngine.Rendering.Universal.ShadowShape2DProvider, Unity.RenderPipelines.Universal.2D.Runtime]]', ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data:
-        m_Cache: []
 --- !u!1 &303313490
 GameObject:
   m_ObjectHideFlags: 0
@@ -11706,6 +11668,7 @@ GameObject:
   - component: {fileID: 713007778}
   - component: {fileID: 713007779}
   - component: {fileID: 713007780}
+  - component: {fileID: 713007781}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -11787,7 +11750,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1806914129}
-  - {fileID: 70733318}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &713007778
@@ -11853,6 +11815,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &713007781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713007775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb9df437073942fda0108f22e9eac36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
 --- !u!1 &1253115732
 GameObject:
   m_ObjectHideFlags: 0
@@ -12039,6 +12013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1578517403}
   - component: {fileID: 1578517402}
+  - component: {fileID: 1578517404}
   m_Layer: 0
   m_Name: "B\xE5l"
   m_TagString: Untagged
@@ -12122,6 +12097,19 @@ Transform:
   - {fileID: 2022259892}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1578517404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578517401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4619ddaf1fe1941a7b6d375de701f08d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: "Assembly-CSharp::Ba\u030Al"
+  fireController: {fileID: 2022259894}
 --- !u!1 &1765725363
 GameObject:
   m_ObjectHideFlags: 0
@@ -12396,6 +12384,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2022259892}
   - component: {fileID: 2022259891}
+  - component: {fileID: 2022259893}
+  - component: {fileID: 2022259894}
   m_Layer: 0
   m_Name: Spot Light 2D
   m_TagString: Untagged
@@ -12450,8 +12440,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.52
-  m_PointLightOuterRadius: 3.28
+  m_PointLightInnerRadius: 0.27
+  m_PointLightOuterRadius: 1.85
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -12494,6 +12484,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1578517403}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2022259893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022259890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d098a843211f4c9183cbf5f4e9ebe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  light: {fileID: 2022259891}
+  minIntensity: 0.65
+  maxIntensity: 0.85
+  flickerIntensity: 2
+--- !u!114 &2022259894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022259890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65e324250c34240299320572ac30513e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BaalController
+  state: 0
+  radii:
+  - 1.85
+  - 3.2
+  - 5
+  flickerVariation: 0.05
+  flickerSpeed: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -12501,3 +12526,4 @@ SceneRoots:
   - {fileID: 713007777}
   - {fileID: 1517988593}
   - {fileID: 1578517403}
+  - {fileID: 163403964}
