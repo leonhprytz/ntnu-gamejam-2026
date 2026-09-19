@@ -1,11 +1,14 @@
 using System;
 using UnityEngine;
 
-public class PlayGuitarQuest : Interactable
+public class PlayGuitarQuest : InteractionCheckpoint
 {
-
-    protected override void TryInteract()
+    public override void TryInteract()
     {
-        Debug.Log("PlayGuitarQuest interacted");
+        if (VerifyInteraction())
+        {
+            Debug.Log("PlayGuitarQuest interacted");
+            MarkInteractionComplete();
+        }
     }
 }

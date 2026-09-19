@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
 
-public class InteractionCheckpoint : MonoBehaviour
+public abstract class InteractionCheckpoint : MonoBehaviour
 {
 
     public event Action<InteractionCheckpoint> interactionCompletedEvent;
     public bool interactionCompleted;
     
-    public QuestLine questLine;
+    private QuestLine questLine;
 
     private bool done = false;
 
@@ -17,14 +17,27 @@ public class InteractionCheckpoint : MonoBehaviour
         
     }
 
+    public void setQuestLine(QuestLine questLine)
+    {
+        this.questLine = questLine;
+    }
+
+    public abstract void TryInteract();
+
     public bool VerifyInteraction()
     {
-        questLine.VerifyInteraction(this);
-        return true;        
+        return questLine.VerifyInteraction(this);        
     }
 
     public void MarkInteractionComplete()
     {
+        if (done)
+        {
+            return;
+        }
+
+        done = true;
+        interactionCompleted = true;
         interactionCompletedEvent?.Invoke(this);
     }
 
@@ -35,14 +48,8 @@ public class InteractionCheckpoint : MonoBehaviour
 
     void Update()
     {
-        if (done)
+        if (!done && interactionCompleted)
         {
-            return;
-        }
-
-        if (interactionCompleted)
-        {
-            done = true;
             MarkInteractionComplete();
         }
     }

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor;
 using UnityEngine;
 
 // [CustomEditor(typeof(QuestLine))]
@@ -9,8 +8,8 @@ public class QuestLine : MonoBehaviour
 {
     public string questName;
     public InteractionCheckpoint[] interactionCheckpoints;
-    [SerializeField]
-    private List<bool> interactionsCompleted;
+
+    private int currentInteractionCheckpointIndex = 0;
 
     [Header("light value settings")]
     public int lightValueToStartQuestLine;
@@ -29,20 +28,25 @@ public class QuestLine : MonoBehaviour
     private bool questLineStarted = false;
     public bool questLineWon;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        interactionsCompleted = new List<bool>();
+        InteractionManager.instance.InteractWasPressed += tryInteractionCheckpoint;
+        // interactionsCompleted = new List<bool>();
 
         QuestManager.instance.LightValueChanged += OnLightValueChanged;
         for(int i = 0; i < interactionCheckpoints.Length; i++)
         {
-            interactionCheckpoints[i].questLine = this;
+            interactionCheckpoints[i].setQuestLine(this);
             interactionCheckpoints[i].interactionCompletedEvent += MarkInteractionComplete;
-            interactionsCompleted.Add(false);
+            // interactionsCompleted.Add(false);
         }
     }
 
+    public void tryInteractionCheckpoint()
+    {
+        if (currentInteractionCheckpointIndex >= interactionCheckpoints.Length) return;
+        interactionCheckpoints[currentInteractionCheckpointIndex].TryInteract();
+    }
     public void StartQuestLine()
     {
         Debug.Log("questline started");
@@ -53,26 +57,38 @@ public class QuestLine : MonoBehaviour
     }
 
     public bool VerifyInteraction(InteractionCheckpoint interactionCheckpoint){
-        int index = Array.IndexOf(interactionCheckpoints, interactionCheckpoint);
+        // int index = Array.IndexOf(interactionCheckpoints, interactionCheckpoint);
 
-        return interactionsCompleted[index];
+        // return interactionsCompleted[index];
+        return currentInteractionCheckpointIndex == Array.IndexOf(interactionCheckpoints, interactionCheckpoint);
+
     }
 
     private void MarkInteractionComplete(InteractionCheckpoint interactionCheckpoint)
     {
-        int index = Array.IndexOf(interactionCheckpoints, interactionCheckpoint);
-        Debug.Log("interaction " + (interactionsCompleted) + " have been completed");
-
-        if(interactionsCompleted[index] == false)
+        // Only the step the questline is currently on may advance the cursor.
+        if (Array.IndexOf(interactionCheckpoints, interactionCheckpoint) != currentInteractionCheckpointIndex)
         {
-            MarkQuestlineComplete(index);
+            return;
+        }
+
+        Debug.Log("interaction " + interactionCheckpoint.name + " have been completed");
+        currentInteractionCheckpointIndex ++;
+
+        // if(interactionsCompleted[index] == false)
+        // {
+        //     MarkQuestlineComplete(index);
+        // }
+        if (currentInteractionCheckpointIndex == interactionCheckpoints.Length)
+        {
+            MarkQuestlineComplete();
         }
         
     }
 
-    private void MarkQuestlineComplete(int index)
+    private void MarkQuestlineComplete()
     {
-        interactionsCompleted[index] = true;
+        // interactionsCompleted[index] = true;
         questlineCompletedEvent?.Invoke(this);
     }
 

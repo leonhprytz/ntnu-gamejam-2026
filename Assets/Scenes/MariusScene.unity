@@ -11647,6 +11647,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1383550599321744476, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1664527532}
+    - targetCorrespondingSourceObject: {fileID: 1383550599321744476, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1664527538}
+    - targetCorrespondingSourceObject: {fileID: 1383550599321744476, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1664527539}
   m_SourcePrefab: {fileID: 100100000, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
 --- !u!1 &1105280373
 GameObject:
@@ -12105,6 +12111,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f095c88bd6c97c0428414cf7e13b4616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayGuitarQuest
+  interactionCompleted: 0
+  questLine: {fileID: 1664527538}
+--- !u!114 &1664527538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664527531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ad643d670c1b394bb7aad9721c3bfb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestLine
+  questName: GuitarPlayer
+  interactionCheckpoints:
+  - {fileID: 1664527532}
+  - {fileID: 1664527539}
+  interactionsCompleted: 
+  lightValueToStartQuestLine: 0
+  lightValueWin: 0
+  lightValueLose: 0
+  spawnsNPC: 0
+  npcToSpawn: {fileID: 0}
+  startPoint: {fileID: 0}
+  questLineWon: 0
+--- !u!114 &1664527539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664527531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c5154d10bfaa64dbc827b7d9320fd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MelodyResponseQuest
+  interactionCompleted: 0
+  questLine: {fileID: 1664527538}
 --- !u!1 &1765725363
 GameObject:
   m_ObjectHideFlags: 0
