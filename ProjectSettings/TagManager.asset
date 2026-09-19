@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - EmberTrigger
   layers:
   - Default
   - TransparentFX
@@ -44,20 +45,14 @@ TagManager:
   - name: Ground
     uniqueID: 32465771
     locked: 0
-  - name: WalkInFront
-    uniqueID: 1639185763
-    locked: 0
   - name: Collision
     uniqueID: 3365517993
     locked: 0
+  - name: Ember
+    uniqueID: 2261727519
+    locked: 0
   - name: Player
     uniqueID: 2020106243
-    locked: 0
-  - name: WalkBehind
-    uniqueID: 626424501
-    locked: 0
-  - name: Decor
-    uniqueID: 970308077
     locked: 0
   m_RenderingLayers:
   - Default
