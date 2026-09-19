@@ -16331,6 +16331,7 @@ GameObject:
   - component: {fileID: 713007780}
   - component: {fileID: 713007781}
   - component: {fileID: 713007782}
+  - component: {fileID: 713007783}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -16427,7 +16428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9add503f6a0f47de9e1b2f7211bd195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  moveSpeed: 32
+  moveSpeed: 1
   rb: {fileID: 713007779}
 --- !u!50 &713007779
 Rigidbody2D:
@@ -16454,8 +16455,8 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!95 &713007780
 Animator:
   serializedVersion: 7
@@ -16498,6 +16499,43 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713007775}
   m_Enabled: 1
+--- !u!70 &713007783
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713007775}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.000000014757543, y: -0.3737953}
+  m_Size: {x: 0.5376879, y: 0.25411502}
+  m_Direction: 1
 --- !u!1 &1156673999
 GameObject:
   m_ObjectHideFlags: 0
@@ -16859,6 +16897,7 @@ GameObject:
   - component: {fileID: 1578517402}
   - component: {fileID: 1578517404}
   - component: {fileID: 1578517405}
+  - component: {fileID: 1578517406}
   m_Layer: 0
   m_Name: "B\xE5l"
   m_TagString: Untagged
@@ -16980,6 +17019,43 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &1578517406
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578517401}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.34}
+  m_Size: {x: 0.77528447, y: 0.33119562}
+  m_Direction: 1
 --- !u!1001 &1673210332
 PrefabInstance:
   m_ObjectHideFlags: 0

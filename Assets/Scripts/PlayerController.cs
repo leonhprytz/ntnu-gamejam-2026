@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
     private MovePriority movePriority = new MovePriority();
     private Animator animator;
 
-    public float moveSpeed;
+    public float moveSpeed = 1;
     public Rigidbody2D rb;
 
     void handleKeyPress(Keyboard kb)
@@ -163,9 +163,15 @@ public class PlayerController : MonoBehaviour
                 break;
         }
 
-        Vector2 pos = new Vector2(this.transform.position.x, this.transform.position.y);
-        rb.MovePosition(pos + Time.deltaTime * dv * moveSpeed);
+        rb.linearVelocity = dv * moveSpeed;
         animator.SetInteger("moveDirection", (int)md);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        print(collision);
+        rb.angularVelocity = 0;
+        rb.linearVelocity = Vector2.zero;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
