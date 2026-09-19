@@ -9,7 +9,10 @@ public enum BonfireSize
 
 public class BonfireManager : MonoBehaviour
 {
+    private Animator animator;
+
     public FireController fireController;
+    public BonfireAudioController bonfireAudioController;
 
     [SerializeField]
     private BonfireSize _size;
@@ -19,8 +22,9 @@ public class BonfireManager : MonoBehaviour
         set
         {
             _size = value;
-            print(size);
             fireController.fireSize = size;
+            bonfireAudioController.size = size;
+            animator?.SetInteger("bonfireSize", (int)size);
         }
     }
 
@@ -45,6 +49,7 @@ public class BonfireManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        animator = GetComponent<Animator>();
         size = BonfireSize.Small;
     }
 
