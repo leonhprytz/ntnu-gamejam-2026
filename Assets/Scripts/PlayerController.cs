@@ -10,6 +10,8 @@ enum MoveDirection
     Left,
 }
 
+
+
 class MovePriority
 {
     private int priority = 0;
