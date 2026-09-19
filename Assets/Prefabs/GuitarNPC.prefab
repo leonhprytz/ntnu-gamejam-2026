@@ -1,5 +1,81 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &422390831205226941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6373021027928900440}
+  - component: {fileID: 1432631159524448962}
+  - component: {fileID: 2963173901428481614}
+  m_Layer: 0
+  m_Name: NPCMovement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6373021027928900440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422390831205226941}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.86, y: -2.45562, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5478252711044751940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1432631159524448962
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422390831205226941}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &2963173901428481614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422390831205226941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4a45cc23913af41a27ebdfdd49e4dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
+  movementSpeed: 0
+  movementPoints: []
+  whenToPlay: 0
+  interactionCheckpoint: {fileID: 0}
 --- !u!1 &1383550599321744476
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,6 +88,9 @@ GameObject:
   - component: {fileID: 5062482056054078235}
   - component: {fileID: 2994312719847925240}
   - component: {fileID: 473158519692631924}
+  - component: {fileID: 1823227337507035347}
+  - component: {fileID: 834112649980203084}
+  - component: {fileID: 6211346594402560677}
   m_Layer: 0
   m_Name: GuitarNPC
   m_TagString: Untagged
@@ -31,7 +110,9 @@ Transform:
   m_LocalPosition: {x: -1.14, y: 3.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6373021027928900440}
+  - {fileID: 4527756722345271147}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5062482056054078235
@@ -83,8 +164,8 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7513828375999459448, guid: 8f20a39cb5c9d47cda5ac6977075345f, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.046141744, a: 1}
+  m_Sprite: {fileID: -6465974316925700019, guid: a64410bc3f612b74eb1c3de33e501a9b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -106,7 +187,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c4a45cc23913af41a27ebdfdd49e4dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
+  movementSpeed: 0
+  movementPoints: []
   whenToPlay: 0
+  interactionCheckpoint: {fileID: 0}
 --- !u!50 &473158519692631924
 Rigidbody2D:
   serializedVersion: 5
@@ -134,3 +218,236 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!58 &1823227337507035347
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383550599321744476}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.68
+--- !u!114 &834112649980203084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383550599321744476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ad643d670c1b394bb7aad9721c3bfb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestLine
+  priority: 0
+  questName: 
+  steps:
+  - kind: 0
+    lines:
+    - Hello stranger! I have this melody I've been working on but i have not had anyone to show it to
+    - Could I play it for you?
+    branches:
+    - option: Yes, please!
+      targetStep: 3
+    - option: No, I don't like music
+      targetStep: 1
+    logic: {fileID: 0}
+  - kind: 0
+    lines:
+    - Never have I heard such rubbish!
+    branches: []
+    logic: {fileID: 0}
+  - kind: 1
+    lines:
+    - Never have I heard such rubbish!
+    branches: []
+    logic: {fileID: 0}
+  - kind: 1
+    lines:
+    - Hello stranger! I have this melody I've been working on but i have not had anyone to show it to
+    - Could I play it for you?
+    branches:
+    - option: Yes, please!
+      targetStep: 0
+    - option: No, I don't like music
+      targetStep: 0
+    logic: {fileID: 0}
+  - kind: 0
+    lines:
+    - Phew! Playing for a stranger got my nerves up. What do you think?
+    branches:
+    - option: It was awesome!
+      targetStep: 5
+    - option: Not quite my taste
+      targetStep: 2
+    logic: {fileID: 0}
+  - kind: 0
+    lines:
+    - 'done
+
+'
+    branches: []
+    logic: {fileID: 0}
+  dialogue: {fileID: 1673877496871836962}
+  lightValueToStartQuestLine: 0
+  lightValueWin: 0
+  lightValueLose: 0
+  spawnsNPC: 0
+  npcToSpawn: {fileID: 0}
+  questLineWon: 0
+--- !u!114 &6211346594402560677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383550599321744476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c284afe0a4af76140b508472769da0c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayGuitarSong
+  interactionCompleted: 0
+  movement: {fileID: 2963173901428481614}
+  audioSource: {fileID: 0}
+  song: {fileID: 8300000, guid: bfbda761660404bbda5146844d499ad3, type: 3}
+--- !u!1001 &8375523067055427729
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5478252711044751940}
+    m_Modifications:
+    - target: {fileID: 4706262732190582506, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_Name
+      value: Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+--- !u!114 &1673877496871836962 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7134013436970470835, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+  m_PrefabInstance: {fileID: 8375523067055427729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e757a8d9ace194bb2685a51c94886f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueInteraction
+--- !u!224 &4527756722345271147 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
+  m_PrefabInstance: {fileID: 8375523067055427729}
+  m_PrefabAsset: {fileID: 0}

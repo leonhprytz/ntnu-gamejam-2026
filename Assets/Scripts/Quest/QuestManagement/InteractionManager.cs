@@ -17,7 +17,7 @@ public class InteractionManager : MonoBehaviour
     // so mashing the interact button can't restart it.
     public bool IsBusy;
 
-    private readonly List<Interactable> availableInteractions = new List<Interactable>();
+    public readonly List<Interactable> availableInteractions = new List<Interactable>();
 
     void Awake()
     {

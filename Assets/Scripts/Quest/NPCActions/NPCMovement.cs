@@ -7,7 +7,10 @@ public class NPCMovement : MonoBehaviour
     public enum WhenToPlay
     {
         onStart,
-        afterInteraction
+        afterInteraction,
+        // Doesn't start on its own: an interaction runs PlayMovement and waits
+        // for it, so it can do something else once the NPC has arrived.
+        onCue
     }
 
     public float movementSpeed;
@@ -28,7 +31,7 @@ public class NPCMovement : MonoBehaviour
         {
             StartCoroutine(PlayMovement());
         }
-        else
+        else if(whenToPlay == WhenToPlay.afterInteraction)
         {
             interactionCheckpoint.interactionCompletedEvent += StartMovement;
         }
@@ -42,7 +45,7 @@ public class NPCMovement : MonoBehaviour
     {
         StartCoroutine(PlayMovement());
     }
-    private IEnumerator PlayMovement()
+    public IEnumerator PlayMovement()
     {
         for(int i = 0; i < movementPoints.Length; i++)
         {
