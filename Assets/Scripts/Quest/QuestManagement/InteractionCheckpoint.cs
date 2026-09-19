@@ -20,19 +20,15 @@ public class InteractionCheckpoint : MonoBehaviour
         interactionCompletedEvent?.Invoke(this);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (done)
-        {
-            return;
-        }
 
-        if (interactionCompleted)
-        {
-            done = true;
-            MarkInteractionComplete();
-        }
+}
+
+
+public class temp : InteractionCheckpoint
+{
+
+    private void EndOfInteraction()
+    {
+        MarkInteractionComplete();
     }
-    
 }

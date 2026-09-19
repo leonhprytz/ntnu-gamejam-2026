@@ -38,7 +38,7 @@ public class QuestLine : MonoBehaviour
         Debug.Log("questline started");
         if(npcToSpawn != null)
         {
-            Instantiate(npcToSpawn, startPoint);
+            npcToSpawn.SetActive(true);
         }
     }
 
@@ -67,7 +67,7 @@ public class QuestLine : MonoBehaviour
             return;
         }
 
-        if(currentLightValue > lightValueToStartQuestLine)
+        if(currentLightValue >= lightValueToStartQuestLine)
         {
             StartQuestLine();
             questLineStarted = true;
