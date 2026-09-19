@@ -12093,7 +12093,8 @@ Transform:
   m_LocalPosition: {x: -0.96386, y: 0.01322, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2022259892}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1578517404
@@ -12105,10 +12106,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1578517401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed6cfa4526e6849788389f275262e2c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4619ddaf1fe1941a7b6d375de701f08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: "Assembly-CSharp::Ba\u030Al"
-  "\u521D\u59CB\u5149\u7167\u7EA7\u522B": 2
+  fireController: {fileID: 2022259894}
 --- !u!1 &1765725363
 GameObject:
   m_ObjectHideFlags: 0
@@ -12384,6 +12385,7 @@ GameObject:
   - component: {fileID: 2022259892}
   - component: {fileID: 2022259891}
   - component: {fileID: 2022259893}
+  - component: {fileID: 2022259894}
   m_Layer: 0
   m_Name: Spot Light 2D
   m_TagString: Untagged
@@ -12498,6 +12500,25 @@ MonoBehaviour:
   minIntensity: 0.65
   maxIntensity: 0.85
   flickerIntensity: 2
+--- !u!114 &2022259894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022259890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65e324250c34240299320572ac30513e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BaalController
+  state: 0
+  radii:
+  - 1.85
+  - 3.2
+  - 5
+  flickerVariation: 0.05
+  flickerSpeed: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
