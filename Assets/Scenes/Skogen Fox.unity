@@ -521,7 +521,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -231948628125939053, guid: 716dffe5722c74e37a66f57138230a1f, type: 3}
@@ -532,7 +532,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &13824247
@@ -947,7 +947,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -523410300131820228, guid: 58de9c22ee4a44587a4283df292a2858, type: 3}
@@ -1400,7 +1400,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -1411,7 +1411,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &189993409
@@ -1691,7 +1691,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 970308077
-  m_SortingLayer: 6
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -17681,7 +17681,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -17692,7 +17692,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &494009916
@@ -18864,7 +18864,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -231948628125939053, guid: 716dffe5722c74e37a66f57138230a1f, type: 3}
@@ -18875,7 +18875,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &519400653
@@ -19278,7 +19278,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1639185763
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -19728,7 +19728,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -19739,7 +19739,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &666939625
@@ -20144,7 +20144,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -20155,7 +20155,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &670440179
@@ -20560,7 +20560,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -20571,7 +20571,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &676703591
@@ -20773,7 +20773,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2596274564673259329, guid: 230145f0a208940abbaa8a2311178b34, type: 3}
@@ -21611,7 +21611,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -21622,7 +21622,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &813874148
@@ -21771,7 +21771,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -7215109322168429643, guid: 7efef60ac4c8f4e65b01cd2740a1c751, type: 3}
@@ -22571,660 +22571,6 @@ MonoBehaviour:
       type: {class: 'Provider2DCache`1[[UnityEngine.Rendering.Universal.ShadowShape2DProvider, Unity.RenderPipelines.Universal.2D.Runtime]]', ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
       data:
         m_Cache: []
---- !u!1 &975506888
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 975506895}
-  - component: {fileID: 975506894}
-  - component: {fileID: 975506893}
-  - component: {fileID: 975506892}
-  - component: {fileID: 975506891}
-  - component: {fileID: 975506890}
-  - component: {fileID: 975506889}
-  - component: {fileID: 975506897}
-  - component: {fileID: 975506898}
-  - component: {fileID: 975506896}
-  - component: {fileID: 975506899}
-  m_Layer: 0
-  m_Name: DuckNPC
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &975506889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975506888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1153c34495c4d44e8dd3ef090646ef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  questLine: {fileID: 975506896}
-  waypoints:
-  - {fileID: 915414694}
-  - {fileID: 519400654}
-  - {fileID: 1952587624}
-  - {fileID: 1610632137}
-  moveSpeed: 1
---- !u!58 &975506890
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975506888}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.85
---- !u!114 &975506891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975506888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.ShadowCaster2D
-  m_ShadowGroup: 0
-  m_Priority: 0
-  m_ComponentVersion: 6
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_AlphaCutoff: 0.1
-  m_ApplyToSortingLayers: 000000006b63ef01a9ba99c81f39cf8603606878i
-  m_ShapePath:
-  - {x: -0.234375, y: -0.296875, z: 0}
-  - {x: -0.234375, y: 0.296875, z: 0}
-  - {x: 0.234375, y: 0.296875, z: 0}
-  - {x: 0.234375, y: -0.296875, z: 0}
-  m_ShapePathHash: 0
-  m_InstanceId: 0
-  m_ShadowShape2DComponent: {fileID: 975506892}
-  m_ShadowShape2DProvider:
-    rid: 7519226231851319379
-  m_ShadowCastingSource: 2
-  m_ShadowMesh:
-    rid: 7519226231851319376
-  m_CastingOption: 1
-  m_PreviousTrimEdge: 0.02
-  m_PreviousEdgeProcessing: 1
-  m_PreviousShadowCastingSource: 2
-  m_PreviousShadowShape2DSource: {fileID: 975506892}
-  m_PreviousShadowShape2DProviderHash: 731544538
-  m_SelectionSources:
-    rid: 7519226231851319377
-  references:
-    version: 2
-    RefIds:
-    - rid: 7519226231851319376
-      type: {class: ShadowMesh2D, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data:
-        m_Vertices:
-        - position: {x: 0.1134491, y: -0.24217224, z: 0}
-          tangent: {x: -1, y: 0, z: 0.16014099, w: -0.21096802}
-        - position: {x: 0.16014099, y: -0.21096802, z: 0}
-          tangent: {x: -1, y: 0, z: 0.19134521, w: -0.16429138}
-        - position: {x: 0.19134521, y: -0.16429138, z: 0}
-          tangent: {x: -1, y: 0, z: 0.20230103, w: -0.109191895}
-        - position: {x: 0.20230103, y: -0.109191895, z: 0}
-          tangent: {x: -1, y: 0, z: 0.19134521, w: -0.054092407}
-        - position: {x: 0.19134521, y: -0.054092407, z: 0}
-          tangent: {x: -1, y: 0, z: 0.16014099, w: -0.0074157715}
-        - position: {x: 0.16014099, y: -0.0074157715, z: 0}
-          tangent: {x: -1, y: 0, z: 0.113464355, w: 0.023773193}
-        - position: {x: 0.113464355, y: 0.023773193, z: 0}
-          tangent: {x: -1, y: 0, z: 0.056381226, w: 0.035125732}
-        - position: {x: 0.056381226, y: 0.035125732, z: 0}
-          tangent: {x: -1, y: 0, z: -0.021362305, w: 0.035125732}
-        - position: {x: -0.021362305, y: 0.035125732, z: 0}
-          tangent: {x: -1, y: 0, z: -0.078445435, w: 0.023773193}
-        - position: {x: -0.078445435, y: 0.023773193, z: 0}
-          tangent: {x: -1, y: 0, z: -0.12512207, w: -0.0074157715}
-        - position: {x: -0.12512207, y: -0.0074157715, z: 0}
-          tangent: {x: -1, y: 0, z: -0.1563263, w: -0.054092407}
-        - position: {x: -0.1563263, y: -0.054092407, z: 0}
-          tangent: {x: -1, y: 0, z: -0.16726685, w: -0.109191895}
-        - position: {x: -0.16726685, y: -0.109191895, z: 0}
-          tangent: {x: -1, y: 0, z: -0.1563263, w: -0.16427612}
-        - position: {x: -0.1563263, y: -0.16427612, z: 0}
-          tangent: {x: -1, y: 0, z: -0.12512207, w: -0.21096802}
-        - position: {x: -0.12512207, y: -0.21096802, z: 0}
-          tangent: {x: -1, y: 0, z: -0.078430176, w: -0.24217224}
-        - position: {x: -0.078430176, y: -0.24217224, z: 0}
-          tangent: {x: -1, y: 0, z: -0.021377563, w: -0.25350952}
-        - position: {x: -0.021377563, y: -0.25350952, z: 0}
-          tangent: {x: -1, y: 0, z: 0.056396484, w: -0.25350952}
-        - position: {x: 0.056396484, y: -0.25350952, z: 0}
-          tangent: {x: -1, y: 0, z: 0.1134491, w: -0.24217224}
-        - position: {x: 0.1134491, y: -0.24217224, z: 0}
-          tangent: {x: 0, y: 0, z: 0.16014099, w: -0.21096802}
-        - position: {x: 0.16014099, y: -0.21096802, z: 0}
-          tangent: {x: 0, y: 0, z: 0.1134491, w: -0.24217224}
-        - position: {x: 0.1134491, y: -0.24217224, z: 0}
-          tangent: {x: 1, y: 0, z: 0.056396484, w: -0.25350952}
-        - position: {x: 0.1134491, y: -0.24217224, z: 0}
-          tangent: {x: 3, y: 0, z: 0.19134521, w: -0.16429138}
-        - position: {x: 0.16014099, y: -0.21096802, z: 0}
-          tangent: {x: 0, y: 0, z: 0.19134521, w: -0.16429138}
-        - position: {x: 0.19134521, y: -0.16429138, z: 0}
-          tangent: {x: 0, y: 0, z: 0.16014099, w: -0.21096802}
-        - position: {x: 0.16014099, y: -0.21096802, z: 0}
-          tangent: {x: 1, y: 0, z: 0.1134491, w: -0.24217224}
-        - position: {x: 0.16014099, y: -0.21096802, z: 0}
-          tangent: {x: 3, y: 0, z: 0.20230103, w: -0.109191895}
-        - position: {x: 0.19134521, y: -0.16429138, z: 0}
-          tangent: {x: 0, y: 0, z: 0.20230103, w: -0.109191895}
-        - position: {x: 0.20230103, y: -0.109191895, z: 0}
-          tangent: {x: 0, y: 0, z: 0.19134521, w: -0.16429138}
-        - position: {x: 0.19134521, y: -0.16429138, z: 0}
-          tangent: {x: 1, y: 0, z: 0.16014099, w: -0.21096802}
-        - position: {x: 0.19134521, y: -0.16429138, z: 0}
-          tangent: {x: 3, y: 0, z: 0.19134521, w: -0.054092407}
-        - position: {x: 0.20230103, y: -0.109191895, z: 0}
-          tangent: {x: 0, y: 0, z: 0.19134521, w: -0.054092407}
-        - position: {x: 0.19134521, y: -0.054092407, z: 0}
-          tangent: {x: 0, y: 0, z: 0.20230103, w: -0.109191895}
-        - position: {x: 0.20230103, y: -0.109191895, z: 0}
-          tangent: {x: 1, y: 0, z: 0.19134521, w: -0.16429138}
-        - position: {x: 0.20230103, y: -0.109191895, z: 0}
-          tangent: {x: 3, y: 0, z: 0.16014099, w: -0.0074157715}
-        - position: {x: 0.19134521, y: -0.054092407, z: 0}
-          tangent: {x: 0, y: 0, z: 0.16014099, w: -0.0074157715}
-        - position: {x: 0.16014099, y: -0.0074157715, z: 0}
-          tangent: {x: 0, y: 0, z: 0.19134521, w: -0.054092407}
-        - position: {x: 0.19134521, y: -0.054092407, z: 0}
-          tangent: {x: 1, y: 0, z: 0.20230103, w: -0.109191895}
-        - position: {x: 0.19134521, y: -0.054092407, z: 0}
-          tangent: {x: 3, y: 0, z: 0.113464355, w: 0.023773193}
-        - position: {x: 0.16014099, y: -0.0074157715, z: 0}
-          tangent: {x: 0, y: 0, z: 0.113464355, w: 0.023773193}
-        - position: {x: 0.113464355, y: 0.023773193, z: 0}
-          tangent: {x: 0, y: 0, z: 0.16014099, w: -0.0074157715}
-        - position: {x: 0.16014099, y: -0.0074157715, z: 0}
-          tangent: {x: 1, y: 0, z: 0.19134521, w: -0.054092407}
-        - position: {x: 0.16014099, y: -0.0074157715, z: 0}
-          tangent: {x: 3, y: 0, z: 0.056381226, w: 0.035125732}
-        - position: {x: 0.113464355, y: 0.023773193, z: 0}
-          tangent: {x: 0, y: 0, z: 0.056381226, w: 0.035125732}
-        - position: {x: 0.056381226, y: 0.035125732, z: 0}
-          tangent: {x: 0, y: 0, z: 0.113464355, w: 0.023773193}
-        - position: {x: 0.113464355, y: 0.023773193, z: 0}
-          tangent: {x: 1, y: 0, z: 0.16014099, w: -0.0074157715}
-        - position: {x: 0.113464355, y: 0.023773193, z: 0}
-          tangent: {x: 3, y: 0, z: -0.021362305, w: 0.035125732}
-        - position: {x: 0.056381226, y: 0.035125732, z: 0}
-          tangent: {x: 0, y: 0, z: -0.021362305, w: 0.035125732}
-        - position: {x: -0.021362305, y: 0.035125732, z: 0}
-          tangent: {x: 0, y: 0, z: 0.056381226, w: 0.035125732}
-        - position: {x: 0.056381226, y: 0.035125732, z: 0}
-          tangent: {x: 1, y: 0, z: 0.113464355, w: 0.023773193}
-        - position: {x: 0.056381226, y: 0.035125732, z: 0}
-          tangent: {x: 3, y: 0, z: -0.078445435, w: 0.023773193}
-        - position: {x: -0.021362305, y: 0.035125732, z: 0}
-          tangent: {x: 0, y: 0, z: -0.078445435, w: 0.023773193}
-        - position: {x: -0.078445435, y: 0.023773193, z: 0}
-          tangent: {x: 0, y: 0, z: -0.021362305, w: 0.035125732}
-        - position: {x: -0.021362305, y: 0.035125732, z: 0}
-          tangent: {x: 1, y: 0, z: 0.056381226, w: 0.035125732}
-        - position: {x: -0.021362305, y: 0.035125732, z: 0}
-          tangent: {x: 3, y: 0, z: -0.12512207, w: -0.0074157715}
-        - position: {x: -0.078445435, y: 0.023773193, z: 0}
-          tangent: {x: 0, y: 0, z: -0.12512207, w: -0.0074157715}
-        - position: {x: -0.12512207, y: -0.0074157715, z: 0}
-          tangent: {x: 0, y: 0, z: -0.078445435, w: 0.023773193}
-        - position: {x: -0.078445435, y: 0.023773193, z: 0}
-          tangent: {x: 1, y: 0, z: -0.021362305, w: 0.035125732}
-        - position: {x: -0.078445435, y: 0.023773193, z: 0}
-          tangent: {x: 3, y: 0, z: -0.1563263, w: -0.054092407}
-        - position: {x: -0.12512207, y: -0.0074157715, z: 0}
-          tangent: {x: 0, y: 0, z: -0.1563263, w: -0.054092407}
-        - position: {x: -0.1563263, y: -0.054092407, z: 0}
-          tangent: {x: 0, y: 0, z: -0.12512207, w: -0.0074157715}
-        - position: {x: -0.12512207, y: -0.0074157715, z: 0}
-          tangent: {x: 1, y: 0, z: -0.078445435, w: 0.023773193}
-        - position: {x: -0.12512207, y: -0.0074157715, z: 0}
-          tangent: {x: 3, y: 0, z: -0.16726685, w: -0.109191895}
-        - position: {x: -0.1563263, y: -0.054092407, z: 0}
-          tangent: {x: 0, y: 0, z: -0.16726685, w: -0.109191895}
-        - position: {x: -0.16726685, y: -0.109191895, z: 0}
-          tangent: {x: 0, y: 0, z: -0.1563263, w: -0.054092407}
-        - position: {x: -0.1563263, y: -0.054092407, z: 0}
-          tangent: {x: 1, y: 0, z: -0.12512207, w: -0.0074157715}
-        - position: {x: -0.1563263, y: -0.054092407, z: 0}
-          tangent: {x: 3, y: 0, z: -0.1563263, w: -0.16427612}
-        - position: {x: -0.16726685, y: -0.109191895, z: 0}
-          tangent: {x: 0, y: 0, z: -0.1563263, w: -0.16427612}
-        - position: {x: -0.1563263, y: -0.16427612, z: 0}
-          tangent: {x: 0, y: 0, z: -0.16726685, w: -0.109191895}
-        - position: {x: -0.16726685, y: -0.109191895, z: 0}
-          tangent: {x: 1, y: 0, z: -0.1563263, w: -0.054092407}
-        - position: {x: -0.16726685, y: -0.109191895, z: 0}
-          tangent: {x: 3, y: 0, z: -0.12512207, w: -0.21096802}
-        - position: {x: -0.1563263, y: -0.16427612, z: 0}
-          tangent: {x: 0, y: 0, z: -0.12512207, w: -0.21096802}
-        - position: {x: -0.12512207, y: -0.21096802, z: 0}
-          tangent: {x: 0, y: 0, z: -0.1563263, w: -0.16427612}
-        - position: {x: -0.1563263, y: -0.16427612, z: 0}
-          tangent: {x: 1, y: 0, z: -0.16726685, w: -0.109191895}
-        - position: {x: -0.1563263, y: -0.16427612, z: 0}
-          tangent: {x: 3, y: 0, z: -0.078430176, w: -0.24217224}
-        - position: {x: -0.12512207, y: -0.21096802, z: 0}
-          tangent: {x: 0, y: 0, z: -0.078430176, w: -0.24217224}
-        - position: {x: -0.078430176, y: -0.24217224, z: 0}
-          tangent: {x: 0, y: 0, z: -0.12512207, w: -0.21096802}
-        - position: {x: -0.12512207, y: -0.21096802, z: 0}
-          tangent: {x: 1, y: 0, z: -0.1563263, w: -0.16427612}
-        - position: {x: -0.12512207, y: -0.21096802, z: 0}
-          tangent: {x: 3, y: 0, z: -0.021377563, w: -0.25350952}
-        - position: {x: -0.078430176, y: -0.24217224, z: 0}
-          tangent: {x: 0, y: 0, z: -0.021377563, w: -0.25350952}
-        - position: {x: -0.021377563, y: -0.25350952, z: 0}
-          tangent: {x: 0, y: 0, z: -0.078430176, w: -0.24217224}
-        - position: {x: -0.078430176, y: -0.24217224, z: 0}
-          tangent: {x: 1, y: 0, z: -0.12512207, w: -0.21096802}
-        - position: {x: -0.078430176, y: -0.24217224, z: 0}
-          tangent: {x: 3, y: 0, z: 0.056396484, w: -0.25350952}
-        - position: {x: -0.021377563, y: -0.25350952, z: 0}
-          tangent: {x: 0, y: 0, z: 0.056396484, w: -0.25350952}
-        - position: {x: 0.056396484, y: -0.25350952, z: 0}
-          tangent: {x: 0, y: 0, z: -0.021377563, w: -0.25350952}
-        - position: {x: -0.021377563, y: -0.25350952, z: 0}
-          tangent: {x: 1, y: 0, z: -0.078430176, w: -0.24217224}
-        - position: {x: -0.021377563, y: -0.25350952, z: 0}
-          tangent: {x: 3, y: 0, z: 0.1134491, w: -0.24217224}
-        - position: {x: 0.056396484, y: -0.25350952, z: 0}
-          tangent: {x: 0, y: 0, z: 0.1134491, w: -0.24217224}
-        - position: {x: 0.1134491, y: -0.24217224, z: 0}
-          tangent: {x: 0, y: 0, z: 0.056396484, w: -0.25350952}
-        - position: {x: 0.056396484, y: -0.25350952, z: 0}
-          tangent: {x: 1, y: 0, z: -0.021377563, w: -0.25350952}
-        - position: {x: 0.056396484, y: -0.25350952, z: 0}
-          tangent: {x: 3, y: 0, z: 0.16014099, w: -0.21096802}
-        m_Indices: 000000001200000013000000130000000100000000000000010000001600000017000000170000000200000001000000020000001a0000001b0000001b0000000300000002000000030000001e0000001f0000001f0000000400000003000000040000002200000023000000230000000500000004000000050000002600000027000000270000000600000005000000060000002a0000002b0000002b0000000700000006000000070000002e0000002f0000002f0000000800000007000000080000003200000033000000330000000900000008000000090000003600000037000000370000000a000000090000000a0000003a0000003b0000003b0000000b0000000a0000000b0000003e0000003f0000003f0000000c0000000b0000000c0000004200000043000000430000000d0000000c0000000d0000004600000047000000470000000e0000000d0000000e0000004a0000004b0000004b0000000f0000000e0000000f0000004e0000004f0000004f000000100000000f000000100000005200000053000000530000001100000010000000110000005600000057000000570000000000000011000000000000001400000015000000010000001800000019000000020000001c0000001d000000030000002000000021000000040000002400000025000000050000002800000029000000060000002c0000002d0000000700000030000000310000000800000034000000350000000900000038000000390000000a0000003c0000003d0000000b00000040000000410000000c00000044000000450000000d00000048000000490000000e0000004c0000004d0000000f0000005000000051000000100000005400000055000000110000005800000059000000i
-        m_IsTransformable: 1
-        m_LocalBounds:
-          m_Center: {x: 0.01751709, y: -0.109191895, z: 0}
-          m_Extent: {x: 0.18478394, y: 0.14431763, z: 0}
-        m_EdgeProcessing: 1
-        m_TrimEdge: 0.02
-        m_FlipX: 0
-        m_FlipY: 0
-        m_InitialTrim: 0.02
-    - rid: 7519226231851319377
-      type: {class: Shadow2DProviderSources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data:
-        m_SelectedHashCode: 621506685
-        m_SelectedSource:
-          rid: 7519226231851319382
-        m_Provider2DCache:
-          rid: 7519226231851319378
-    - rid: 7519226231851319378
-      type: {class: 'Provider2DCache`1[[UnityEngine.Rendering.Universal.ShadowShape2DProvider, Unity.RenderPipelines.Universal.2D.Runtime]]', ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data:
-        m_Cache:
-        - m_Key:
-            m_TypeName: ShadowShape2DProvider_Collider2D
-            m_Component: {fileID: 975506892}
-            m_UsesComponent: 1
-          m_Value:
-            m_Provider:
-              rid: 7519226231851319379
-        - m_Key:
-            m_TypeName: ShadowShape2DProvider_Collider2D
-            m_Component: {fileID: 975506890}
-            m_UsesComponent: 1
-          m_Value:
-            m_Provider:
-              rid: 7519226231851319381
-        - m_Key:
-            m_TypeName: ShadowShape2DProvider_SpriteRenderer
-            m_Component: {fileID: 975506894}
-            m_UsesComponent: 1
-          m_Value:
-            m_Provider:
-              rid: 7519226231851319380
-    - rid: 7519226231851319379
-      type: {class: ShadowShape2DProvider_Collider2D, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data: 
-    - rid: 7519226231851319380
-      type: {class: ShadowShape2DProvider_SpriteRenderer, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data: 
-    - rid: 7519226231851319381
-      type: {class: ShadowShape2DProvider_Collider2D, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data: 
-    - rid: 7519226231851319382
-      type: {class: Shadow2DProviderSource, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data:
-        m_HashCode: 621506685
-        m_SourceType: 2
-        m_MenuPriority: 0
-        m_MenuName:
-          m_Text: CapsuleCollider2D
-          m_Image: {fileID: 0}
-          m_Tooltip: Implemented by ShadowShape2DProvider_Collider2D
-          m_TextWithWhitespace: "CapsuleCollider2D\u200B"
-        m_Provider:
-          rid: 7519226231851319379
-        m_Component: {fileID: 975506892}
---- !u!70 &975506892
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975506888}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.01751076, y: -0.10919462}
-  m_Size: {x: 0.4103828, y: 0.32866713}
-  m_Direction: 1
---- !u!50 &975506893
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975506888}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
---- !u!212 &975506894
-SpriteRenderer:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975506888}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 2020106243
-  m_SortingLayer: 4
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 8868729072188591806, guid: fc3aff94b204740e09680f7b4179e671, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.46875, y: 0.59375}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
-  m_BlendShapeWeights: []
---- !u!4 &975506895
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975506888}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.75, y: -3.44, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1669378211}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &975506896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975506888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ad643d670c1b394bb7aad9721c3bfb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::QuestLine
-  priority: 0
-  _active: 0
-  questName: RunningDuck
-  steps:
-  - kind: 0
-    auto: 0
-    lines:
-    - 'Hello!  '
-    - I'm sorry if I disturbed you, I have just been so stressed lately, I can't sleep. So I end up running all throughout the night
-    - Maybe some company could help. Would you be interested in running a lap with me?
-    branches:
-    - option: Of course I'll join you
-      targetStep: 1
-    - option: Nope, you do you man. Don't try to involve me
-      targetStep: 100
-    logic: {fileID: 0}
-  - kind: 0
-    auto: 1
-    lines:
-    - 'Alright. I won''t hold back, try to stay close to me! '
-    branches:
-    - option: Lets go!
-      targetStep: 2
-    - option: Eh, I changed my mind, I hate running
-      targetStep: 100
-    logic: {fileID: 0}
-  - kind: 1
-    auto: 1
-    lines:
-    - 'Alright, try to stay close to me! Ready to run? '
-    branches:
-    - option: Lets go!
-      targetStep: 2
-    logic: {fileID: 975506898}
-  - kind: 0
-    auto: 0
-    lines:
-    - Wow, i Realy gave it my all that time. I'm actually getting a bit tired. Do you have a place I can stay for the night.
-    branches:
-    - option: Yeah, come join me at my bonfire!
-      targetStep: 4
-    - option: Nope, you ran fast just to embarass me. I don't like you anymore
-      targetStep: 2
-    logic: {fileID: 975506898}
-  - kind: 1
-    auto: 1
-    lines:
-    - Wow, i Realy gave it my all that time. I'm actually getting a bit tired. Do you have a place I can stay for the night.
-    branches:
-    - option: Yeah, come join me at my bonfire!
-      targetStep: 4
-    - option: Nope, you ran fast just to embarass me. I don't like you anymore
-      targetStep: 2
-    logic: {fileID: 975506899}
-  dialogue: {fileID: 1669378212}
-  currentStepIndex: 0
-  lightValueToStartQuestLine: 0
-  lightValueWin: 10
-  lightValueLose: -10
-  spawnsNPC: 0
-  npcToSpawn: {fileID: 0}
-  questLineWon: 0
-  hasInteracted: 0
---- !u!114 &975506897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975506888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b31f698d204bc745b3bd35e87d0749e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ActivateQuestLineOnTriggerEnter
-  questLineToActivateOnTrigger: {fileID: 975506896}
-  trigger: {fileID: 975506890}
---- !u!114 &975506898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975506888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c4a45cc23913af41a27ebdfdd49e4dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
-  interactionCompleted: 0
-  interactableToActivateOnEnd: {fileID: 0}
-  movementSpeed: 5
-  movementPoints:
-  - {fileID: 519400654}
-  - {fileID: 1952587624}
-  - {fileID: 1610632137}
-  - {fileID: 915414694}
-  - {fileID: 519400654}
-  - {fileID: 1952587624}
-  - {fileID: 1610632137}
-  - {fileID: 915414694}
-  - {fileID: 519400654}
-  - {fileID: 1952587624}
-  - {fileID: 1610632137}
-  - {fileID: 915414694}
-  whenToPlay: 1
-  interactionCheckpoint: {fileID: 0}
---- !u!114 &975506899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975506888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c4a45cc23913af41a27ebdfdd49e4dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
-  interactionCompleted: 0
-  interactableToActivateOnEnd: {fileID: 0}
-  movementSpeed: 1
-  movementPoints:
-  - {fileID: 1021895158}
-  whenToPlay: 1
-  interactionCheckpoint: {fileID: 0}
 --- !u!1 &1011599924
 GameObject:
   m_ObjectHideFlags: 0
@@ -23627,7 +22973,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -23638,7 +22984,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &1021895157
@@ -24079,7 +23425,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -24090,7 +23436,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &1106839046
@@ -24608,7 +23954,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -24619,7 +23965,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &1224897524
@@ -25024,7 +24370,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -25035,7 +24381,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &1253115732
@@ -25117,7 +24463,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 626424501
-  m_SortingLayer: 5
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -25198,7 +24544,6 @@ MonoBehaviour:
   - {fileID: 2101526131}
   - {fileID: 1961466703}
   questlinesCompleted: 
-  lightValue: 0
   bonfireManager: {fileID: 1578517404}
 --- !u!4 &1296037637
 Transform:
@@ -25296,7 +24641,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -2033239777
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_RenderMode: 0
@@ -27653,7 +26998,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1878394594762727336, guid: a4054bf07d38943b391c981c9cf3c3ee, type: 3}
@@ -27821,7 +27166,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -231948628125939053, guid: 716dffe5722c74e37a66f57138230a1f, type: 3}
@@ -27832,7 +27177,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!114 &1490942699
@@ -28237,7 +27582,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1837868644, guid: e1a3f25732aed4ce3aa42144b181d0c7, type: 3}
@@ -28292,7 +27637,7 @@ MonoBehaviour:
   bonfireAudioController: {fileID: 1833634013}
   emberController: {fileID: 1384091112}
   _size: 0
-  lightAmount: 1
+  _lightAmount: 1
   minRadius: 1.85
   maxRadius: 5
   mediumThreshold: 30
@@ -28409,10 +27754,12 @@ MonoBehaviour:
   questName: Light the fire
   steps:
   - kind: 1
+    nextState: 0
     auto: 0
     lines: []
     branches: []
     logic: {fileID: 1578517404}
+  _state: 0
   dialogue: {fileID: 0}
   currentStepIndex: 0
   lightValueToStartQuestLine: 0
@@ -28824,7 +28171,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -28835,7 +28182,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &1588910501
@@ -29240,7 +28587,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -29251,7 +28598,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &1594791495
@@ -29335,7 +28682,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4390795823408089067, guid: 06ea9fc4c7d0a453eb2c7fe25f2c3408, type: 3}
@@ -29553,131 +28900,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1160082582}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1669378210
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 975506895}
-    m_Modifications:
-    - target: {fileID: 4706262732190582506, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_Name
-      value: Dialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
---- !u!224 &1669378211 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5399261135166443514, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-  m_PrefabInstance: {fileID: 1669378210}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1669378212 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7134013436970470835, guid: 7c4df20953af7c744b778331aeb95ee7, type: 3}
-  m_PrefabInstance: {fileID: 1669378210}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01e757a8d9ace194bb2685a51c94886f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueInteraction
 --- !u!1 &1688013531
 GameObject:
   m_ObjectHideFlags: 0
@@ -30080,7 +29302,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -231948628125939053, guid: 716dffe5722c74e37a66f57138230a1f, type: 3}
@@ -30091,7 +29313,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &1689102888
@@ -30174,7 +29396,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1878394594762727336, guid: a4054bf07d38943b391c981c9cf3c3ee, type: 3}
@@ -30627,7 +29849,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -30638,7 +29860,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &1725676057
@@ -31043,7 +30265,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -31054,7 +30276,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &1765725363
@@ -31136,7 +30358,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -31873,7 +31095,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 78466998267804645, guid: a222e563fe3644ebf8d76b673fb7ff21, type: 3}
@@ -32035,7 +31257,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -32046,7 +31268,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!114 &1958438845
@@ -33137,7 +32359,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -33148,7 +32370,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!1 &2089012667
@@ -33698,7 +32920,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -231948628125939053, guid: 716dffe5722c74e37a66f57138230a1f, type: 3}
@@ -33709,7 +32931,7 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!114 &2101526122 stripped
@@ -34525,7 +33747,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -929449303
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6170301780317497036, guid: 9c22327269acc4c58a9b171f42858092, type: 3}
@@ -34536,9 +33758,134 @@ SpriteRenderer:
   m_Size: {x: 1.375, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
+--- !u!1001 &177126851434091893
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 580386506280550358, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'waypoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 915414694}
+    - target: {fileID: 580386506280550358, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'waypoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 519400654}
+    - target: {fileID: 580386506280550358, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'waypoints.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1952587624}
+    - target: {fileID: 580386506280550358, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'waypoints.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1610632137}
+    - target: {fileID: 961391976658060113, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: m_Name
+      value: DuckNPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368858832538846412, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368858832538846412, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368858832538846412, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368858832538846412, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368858832538846412, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368858832538846412, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368858832538846412, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368858832538846412, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368858832538846412, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368858832538846412, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540103914803064700, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'movementPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1021895158}
+    - target: {fileID: 2519878212693805796, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'movementPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 519400654}
+    - target: {fileID: 2519878212693805796, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'movementPoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1952587624}
+    - target: {fileID: 2519878212693805796, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'movementPoints.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1610632137}
+    - target: {fileID: 2519878212693805796, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'movementPoints.Array.data[3]'
+      value: 
+      objectReference: {fileID: 915414694}
+    - target: {fileID: 2519878212693805796, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'movementPoints.Array.data[4]'
+      value: 
+      objectReference: {fileID: 519400654}
+    - target: {fileID: 2519878212693805796, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'movementPoints.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1952587624}
+    - target: {fileID: 2519878212693805796, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'movementPoints.Array.data[6]'
+      value: 
+      objectReference: {fileID: 1610632137}
+    - target: {fileID: 2519878212693805796, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'movementPoints.Array.data[7]'
+      value: 
+      objectReference: {fileID: 915414694}
+    - target: {fileID: 2519878212693805796, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'movementPoints.Array.data[8]'
+      value: 
+      objectReference: {fileID: 519400654}
+    - target: {fileID: 2519878212693805796, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'movementPoints.Array.data[9]'
+      value: 
+      objectReference: {fileID: 1952587624}
+    - target: {fileID: 2519878212693805796, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'movementPoints.Array.data[10]'
+      value: 
+      objectReference: {fileID: 1610632137}
+    - target: {fileID: 2519878212693805796, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
+      propertyPath: 'movementPoints.Array.data[11]'
+      value: 
+      objectReference: {fileID: 915414694}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d718efadbaaebd4681e0d0d8e473c00, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -34554,4 +33901,4 @@ SceneRoots:
   - {fileID: 1106839048}
   - {fileID: 817508772}
   - {fileID: 1961466699}
-  - {fileID: 975506895}
+  - {fileID: 177126851434091893}
