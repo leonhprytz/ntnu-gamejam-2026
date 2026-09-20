@@ -7,6 +7,13 @@ public enum QuestStepKind
     Logic,
 }
 
+public enum StateAfterCompletion
+{
+    Continue,
+    Win,
+    Lose,
+}
+
 // One alternative offered after a dialogue step. Picking it sends the questline
 // to targetStep instead of the step that simply comes next.
 [Serializable]
@@ -25,6 +32,9 @@ public class QuestBranch
 public class QuestStep
 {
     public QuestStepKind kind;
+
+    [Tooltip("Specift the state of the questline after this step is completed.")]
+    public StateAfterCompletion nextState;
 
     [Tooltip("Specify whether the action should start automatically or wait for interaction")]
     public bool auto;

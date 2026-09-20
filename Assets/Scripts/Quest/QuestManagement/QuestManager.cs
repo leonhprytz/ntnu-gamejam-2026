@@ -8,10 +8,18 @@ public class QuestManager : MonoBehaviour
     public QuestLine[] questlines;
     public List<bool> questlinesCompleted;
 
-    public int lightValue;
-    private int prevLightValue;
+    public float lightValue
+    {
+        get { return bonfireManager.lightAmount; }
+        set
+        {
+            Debug.Log("Set light amount to: " + value);
+            bonfireManager.lightAmount = value;
+        }
+    }
 
-    public event Action<int> LightValueChanged;
+    private float prevLightValue;
+    public event Action<float> LightValueChanged;
 
     public BonfireManager bonfireManager;
 

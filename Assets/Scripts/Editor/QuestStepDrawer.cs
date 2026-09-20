@@ -64,6 +64,7 @@ public class QuestStepDrawer : PropertyDrawer
         {
             return new[]
             {
+                property.FindPropertyRelative("nextState"),
                 property.FindPropertyRelative("auto"),
                 property.FindPropertyRelative("lines"),
                 property.FindPropertyRelative("branches"),
@@ -72,6 +73,7 @@ public class QuestStepDrawer : PropertyDrawer
 
         return new[]
         {
+            property.FindPropertyRelative("nextState"),
             property.FindPropertyRelative("auto"),
             property.FindPropertyRelative("logic"),
         };

@@ -32,7 +32,12 @@ public class BonfireManager : InteractionCheckpoint
 
     [Header("Light")]
     [SerializeField, Range(1F, 100F)]
-    private float lightAmount = 1F;
+    private float _lightAmount = 1F;
+    public float lightAmount
+    {
+        get { return _lightAmount; }
+        set { SetLight(value); }
+    }
     public float minRadius = 1.85F;
     public float maxRadius = 5.0F;
     public float mediumThreshold = 30F;
@@ -48,7 +53,7 @@ public class BonfireManager : InteractionCheckpoint
     {
         if (fireController != null)
         {
-            AddLight(0F);
+            lightAmount = _lightAmount;
         }
     }
 
@@ -56,31 +61,25 @@ public class BonfireManager : InteractionCheckpoint
     void Start()
     {
         animator = GetComponent<Animator>();
-        AddLight(0F);
     }
 
     // Update is called once per frame
     void Update() { }
 
-
     public void AddLight(float amount)
     {
-        lightAmount = Mathf.Clamp(lightAmount + amount, 1F, 100F);
-        fireController.radii2 = Mathf.Lerp(minRadius, maxRadius, lightAmount / 100F);
+        lightAmount += amount;
+    }
+
+    public void SetLight(float amount)
+    {
+        Debug.Log("Setting light on bonfire: " + amount);
+        _lightAmount = Mathf.Clamp(amount, 1F, 100F);
+        fireController.radii2 = Mathf.Lerp(minRadius, maxRadius, _lightAmount / 100F);
 
         size =
-            lightAmount >= largeThreshold ? BonfireSize.Large
-            : lightAmount >= mediumThreshold ? BonfireSize.Medium
+            _lightAmount >= largeThreshold ? BonfireSize.Large
+            : _lightAmount >= mediumThreshold ? BonfireSize.Medium
             : BonfireSize.Small;
-    }
-
-    public void IncreaseFire()
-    {
-        AddLight(10F);
-    }
-
-    public void DecreaseFire()
-    {
-        AddLight(-10F);
     }
 }
