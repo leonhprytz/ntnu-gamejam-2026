@@ -112,7 +112,7 @@ public class NPCMovement : InteractionCheckpoint
         Vector2 point = movementPoints[index].position;
 
         animationMoveDirection = calculateAnimationMoveDirection(point - rb.position);
-        while ((point - rb.position).magnitude > 0.01)
+        while ((point - rb.position).magnitude > 0.1)
         {
             Vector2 movementVector = point - rb.position;
             Vector2 moveDir = movementVector.normalized * movementSpeed * Time.fixedDeltaTime;

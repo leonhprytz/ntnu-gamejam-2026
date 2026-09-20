@@ -11,7 +11,7 @@ public class QuestLine : Interactable
     [Tooltip("Optional: found among this NPC's children when left empty.")]
     public DialogueInteraction dialogue;
 
-    private int currentStepIndex = 0;
+    public int currentStepIndex = 0;
 
     [Header("light value settings")]
     public int lightValueToStartQuestLine;
@@ -31,6 +31,8 @@ public class QuestLine : Interactable
     // Questlines outrank scenery, so walking up to an NPC standing next to a
     // tree always talks to the NPC.
     public override int BasePriority => 100;
+
+    public bool hasInteracted;
 
     void Start()
     {
@@ -62,6 +64,10 @@ public class QuestLine : Interactable
         // not-yet-available questline doesn't block whatever else is in range.
         if (!questLineStarted)
             return false;
+
+        if(!hasInteracted){
+            hasInteracted = true;
+        }
 
         // Mid-conversation the press means "next line", not "next step".
         if (dialogue != null && dialogue.IsPlaying)
@@ -114,7 +120,7 @@ public class QuestLine : Interactable
 
     public void StartQuestLine()
     {
-        Debug.Log("questline started");
+        Debug.Log("questline started: " + questName);
         GoToStep(0);
         if (npcToSpawn != null)
         {
