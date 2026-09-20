@@ -72,6 +72,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c4a45cc23913af41a27ebdfdd49e4dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
+  interactionCompleted: 0
+  interactableToActivateOnEnd: {fileID: 0}
   movementSpeed: 0
   movementPoints: []
   whenToPlay: 0
@@ -187,6 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c4a45cc23913af41a27ebdfdd49e4dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
+  interactionCompleted: 0
+  interactableToActivateOnEnd: {fileID: 0}
   movementSpeed: 0
   movementPoints: []
   whenToPlay: 0
@@ -231,9 +235,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestLine
   priority: 0
+  _active: 1
   questName: 
   steps:
   - kind: 0
+    auto: 0
     lines:
     - Hello stranger! I have this melody I've been working on but i have not had anyone to show it to
     - Could I play it for you?
@@ -244,16 +250,19 @@ MonoBehaviour:
       targetStep: 1
     logic: {fileID: 0}
   - kind: 0
+    auto: 0
     lines:
     - Never have I heard such rubbish!
     branches: []
     logic: {fileID: 0}
   - kind: 1
+    auto: 0
     lines:
     - Never have I heard such rubbish!
     branches: []
     logic: {fileID: 0}
   - kind: 1
+    auto: 0
     lines:
     - Hello stranger! I have this melody I've been working on but i have not had anyone to show it to
     - Could I play it for you?
@@ -264,6 +273,7 @@ MonoBehaviour:
       targetStep: 0
     logic: {fileID: 0}
   - kind: 0
+    auto: 0
     lines:
     - Phew! Playing for a stranger got my nerves up. What do you think?
     branches:
@@ -273,6 +283,7 @@ MonoBehaviour:
       targetStep: 2
     logic: {fileID: 0}
   - kind: 0
+    auto: 0
     lines:
     - 'done
 
@@ -299,9 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayGuitarSong
   interactionCompleted: 0
-  movement: {fileID: 2963173901428481614}
   audioSource: {fileID: 1511665072349051673}
-  song: {fileID: 8300000, guid: bfbda761660404bbda5146844d499ad3, type: 3}
 --- !u!1 &3417944376182640303
 GameObject:
   m_ObjectHideFlags: 0

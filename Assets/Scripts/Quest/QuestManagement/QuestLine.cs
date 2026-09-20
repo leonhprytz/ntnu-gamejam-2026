@@ -106,12 +106,14 @@ public class QuestLine : Interactable
         }
 
         step.logic.Interact();
+        CompleteCurrentStep();
         return true;
     }
 
     public void StartQuestLine()
     {
         Debug.Log("questline started");
+        GoToStep(0);
         if (npcToSpawn != null)
         {
             npcToSpawn.SetActive(true);
@@ -150,7 +152,6 @@ public class QuestLine : Interactable
                 chosen =>
                 {
                     GoToStep(branches[chosen].targetStep);
-                    TryInteract();
                 }
             );
             return;
@@ -165,10 +166,14 @@ public class QuestLine : Interactable
 
         if (currentStepIndex < steps.Length)
         {
-            active = false; // completed deactivate
+            if (this.steps[currentStepIndex].auto)
+            {
+                TryInteract();
+            }
             return;
         }
 
+        active = false; // completed deactivate
         // The box isn't hidden here: a closing dialogue step should stay
         // readable until the player presses interact again.
         questlineCompletedEvent?.Invoke(this);
@@ -183,8 +188,8 @@ public class QuestLine : Interactable
 
         if (currentLightValue >= lightValueToStartQuestLine)
         {
-            StartQuestLine();
             questLineStarted = true;
+            StartQuestLine();
         }
     }
 }

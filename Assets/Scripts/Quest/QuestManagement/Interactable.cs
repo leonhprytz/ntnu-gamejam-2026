@@ -25,6 +25,8 @@ public abstract class Interactable : MonoBehaviour
             }
         }
     }
+
+    [SerializeField]
     private bool _active;
     public bool active
     {

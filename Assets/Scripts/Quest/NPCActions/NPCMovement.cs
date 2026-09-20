@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class NPCMovement : MonoBehaviour
+public class NPCMovement : InteractionCheckpoint
 {
     private MoveDirection _md;
     private MoveDirection animationMoveDirection
@@ -26,10 +26,6 @@ public class NPCMovement : MonoBehaviour
     {
         onStart,
         afterInteraction,
-
-        // Doesn't start on its own: an interaction runs PlayMovement and waits
-        // for it, so it can do something else once the NPC has arrived.
-        onCue,
     }
 
     public float movementSpeed;
@@ -50,10 +46,11 @@ public class NPCMovement : MonoBehaviour
         {
             StartCoroutine(PlayMovement());
         }
-        else if (whenToPlay == WhenToPlay.afterInteraction)
-        {
-            interactionCheckpoint.interactionCompletedEvent += StartMovement;
-        }
+    }
+
+    public override void Interact()
+    {
+        StartCoroutine(PlayMovement());
     }
 
     private void StartMovement()
@@ -68,10 +65,8 @@ public class NPCMovement : MonoBehaviour
 
     public IEnumerator PlayMovement()
     {
-        print(movementPoints.Length);
         for (int i = 0; i < movementPoints.Length; i++)
         {
-            print(i);
             yield return StartCoroutine(GoToPoint(i));
         }
 

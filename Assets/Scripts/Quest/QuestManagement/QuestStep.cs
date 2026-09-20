@@ -26,8 +26,12 @@ public class QuestStep
 {
     public QuestStepKind kind;
 
+    [Tooltip("Specify whether the action should start automatically or wait for interaction")]
+    public bool auto;
+
     [Tooltip("One interact press per line.")]
-    [TextArea] public string[] lines;
+    [TextArea]
+    public string[] lines;
 
     [Tooltip("Optional: leave empty to just continue with the next step.")]
     public QuestBranch[] branches;

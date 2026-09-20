@@ -12,7 +12,12 @@ public class QuestStepDrawer : PropertyDrawer
 
         SerializedProperty kind = property.FindPropertyRelative("kind");
 
-        Rect rect = new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
+        Rect rect = new Rect(
+            position.x,
+            position.y,
+            position.width,
+            EditorGUIUtility.singleLineHeight
+        );
         EditorGUI.PropertyField(rect, kind, label);
 
         EditorGUI.indentLevel++;
@@ -23,7 +28,8 @@ public class QuestStepDrawer : PropertyDrawer
                 position.x,
                 rect.yMax + EditorGUIUtility.standardVerticalSpacing,
                 position.width,
-                EditorGUI.GetPropertyHeight(body, true));
+                EditorGUI.GetPropertyHeight(body, true)
+            );
 
             EditorGUI.PropertyField(rect, body, true);
         }
@@ -40,7 +46,8 @@ public class QuestStepDrawer : PropertyDrawer
 
         foreach (SerializedProperty body in BodiesOf(property, kind))
         {
-            height += EditorGUIUtility.standardVerticalSpacing + EditorGUI.GetPropertyHeight(body, true);
+            height +=
+                EditorGUIUtility.standardVerticalSpacing + EditorGUI.GetPropertyHeight(body, true);
         }
 
         return height;
@@ -48,17 +55,25 @@ public class QuestStepDrawer : PropertyDrawer
 
     // A dialogue step also offers branching, so it draws two fields; a logic
     // step is still just its object slot.
-    private static SerializedProperty[] BodiesOf(SerializedProperty property, SerializedProperty kind)
+    private static SerializedProperty[] BodiesOf(
+        SerializedProperty property,
+        SerializedProperty kind
+    )
     {
         if (kind.enumValueIndex == (int)QuestStepKind.Dialogue)
         {
             return new[]
             {
+                property.FindPropertyRelative("auto"),
                 property.FindPropertyRelative("lines"),
                 property.FindPropertyRelative("branches"),
             };
         }
 
-        return new[] { property.FindPropertyRelative("logic") };
+        return new[]
+        {
+            property.FindPropertyRelative("auto"),
+            property.FindPropertyRelative("logic"),
+        };
     }
 }
