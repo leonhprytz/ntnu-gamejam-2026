@@ -57,4 +57,20 @@ public class QuestManager : MonoBehaviour
             lightValue -= questline.lightValueLose;
         }
     }
+
+    public bool CheckIfQuestLineIsValid(QuestLine questline)
+    {
+        if (questline == null)
+        {
+            Debug.LogWarning("Questline is null");
+            return false;
+        }
+
+        if (lightValue >= questline.lightValueToStartQuestLine)
+        {
+            return true;
+        }
+
+        return false;
+    }
 }

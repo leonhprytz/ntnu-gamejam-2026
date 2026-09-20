@@ -107,8 +107,8 @@ public class QuestLine : Interactable
             dialogue.Hide();
         }
 
+        // step is an actione, they return when the step is done on their own
         step.logic.Interact();
-        CompleteCurrentStep();
         return true;
     }
 
@@ -120,6 +120,12 @@ public class QuestLine : Interactable
         {
             npcToSpawn.SetActive(true);
         }
+    }
+
+    // checks if the questline is valid and can be started
+    public bool ValidateQuestLine()
+    {
+        return QuestManager.instance.CheckIfQuestLineIsValid(this);
     }
 
     private void MarkInteractionComplete(InteractionCheckpoint interactionCheckpoint)
