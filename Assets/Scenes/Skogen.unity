@@ -16890,7 +16890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.size
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[0].auto
@@ -16938,7 +16938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: lightValueToStartQuestLine
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[0].lines.Array.size
@@ -19930,7 +19930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &817508772
 Transform:
   m_ObjectHideFlags: 0
@@ -20393,7 +20393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[0].auto
@@ -20416,8 +20416,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+      propertyPath: steps.Array.data[3].auto
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[3].kind
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[4].auto
@@ -20428,17 +20432,29 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+      propertyPath: steps.Array.data[5].auto
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+      propertyPath: steps.Array.data[5].kind
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[0].logic
       value: 
       objectReference: {fileID: 2101526137}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[3].logic
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2101526139}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[4].logic
       value: 
       objectReference: {fileID: 2101526122}
+    - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+      propertyPath: steps.Array.data[5].logic
+      value: 
+      objectReference: {fileID: 2101526140}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: lightValueToStartQuestLine
       value: 10
@@ -20453,10 +20469,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[3].lines.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[4].lines.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+      propertyPath: steps.Array.data[5].lines.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
@@ -20481,7 +20501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[3].branches.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: 'steps.Array.data[3].lines.Array.data[0]'
@@ -20498,6 +20518,10 @@ PrefabInstance:
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: 'steps.Array.data[4].lines.Array.data[1]'
       value: Could I play it for you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+      propertyPath: 'steps.Array.data[5].lines.Array.data[0]'
+      value: Never have I heard such rubbish!
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[1].branches.Array.data[0].option
@@ -20653,6 +20677,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1383550599321744476, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2101526135}
+    - targetCorrespondingSourceObject: {fileID: 1383550599321744476, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2101526140}
+    - targetCorrespondingSourceObject: {fileID: 1383550599321744476, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2101526139}
   m_SourcePrefab: {fileID: 100100000, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
 --- !u!1 &954985392
 GameObject:
@@ -24103,6 +24133,11 @@ MonoBehaviour:
   bonfireAudioController: {fileID: 1833634013}
   emberController: {fileID: 1384091112}
   _size: 0
+  lightAmount: 1
+  minRadius: 1.85
+  maxRadius: 5
+  mediumThreshold: 30
+  largeThreshold: 60
 --- !u!95 &1578517405
 Animator:
   serializedVersion: 7
@@ -25222,7 +25257,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.421875
+  orthographic size: 3.6875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -26340,7 +26375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2022259891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26461,10 +26496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FireController
   fireSize: 0
-  radii:
-  - 1.85
-  - 3.2
-  - 5
+  radii2: 1.8815
   flickerVariation: 0.05
   flickerSpeed: 2
 --- !u!1 &2089012667
@@ -27439,6 +27471,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c4a45cc23913af41a27ebdfdd49e4dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
+--- !u!114 &2101526139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041035137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4999fd7810fa12c43aceed2943393673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThrowWaterOnFire
+  interactionCompleted: 0
+--- !u!114 &2101526140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041035137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27654250ab83ad5488f66376fd388ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AddLight
+  interactionCompleted: 0
 --- !u!1 &2146871093
 GameObject:
   m_ObjectHideFlags: 0

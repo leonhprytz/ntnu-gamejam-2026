@@ -6,17 +6,20 @@ public class FireController : MonoBehaviour
     private Light2D light;
 
     public BonfireSize fireSize = BonfireSize.Small;
-    public float[] radii = new float[] { 1.85F, 3.2F, 5.0F };
+    // public float[] radii = new float[] { 1.85F, 3.2F, 5.0F };
+    public float radii2 = 1.85F;
     public float flickerVariation = 0.2F;
     public float flickerSpeed = 2;
 
     private void updateLightRadius()
     {
-        float flickerRange = flickerVariation * radii[(int)fireSize];
+        // float flickerRange = flickerVariation * radii[(int)fireSize];
+        float flickerRange = flickerVariation * radii2;
         float variation =
             Mathf.PerlinNoise1D(flickerSpeed * Time.time) * flickerRange - flickerRange / 2;
 
-        light.pointLightOuterRadius = radii[(int)fireSize] + variation;
+        // light.pointLightOuterRadius = radii[(int)fireSize] + variation;
+        light.pointLightOuterRadius = radii2 + variation;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
