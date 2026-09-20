@@ -1,5 +1,5 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 // Put this on a TextMeshPro UI text and it shows itself whenever something is
 // in interact range.

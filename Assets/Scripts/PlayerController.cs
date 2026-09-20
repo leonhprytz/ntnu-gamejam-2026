@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 enum MoveDirection
 {
@@ -9,8 +10,6 @@ enum MoveDirection
     Down,
     Left,
 }
-
-
 
 class MovePriority
 {
@@ -101,6 +100,8 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed = 1;
     public Rigidbody2D rb;
+    public Light2D torchLight;
+    public bool torchUnlocked = false;
 
     void handleKeyPress(Keyboard kb)
     {
@@ -142,6 +143,19 @@ public class PlayerController : MonoBehaviour
         {
             this.movePriority.deprioritize(MoveDirection.Left);
         }
+
+        if (kb.fKey.wasPressedThisFrame)
+        {
+            if (torchUnlocked)
+                toggleTorch();
+        }
+    }
+
+    void toggleTorch()
+    {
+        bool newValue = !torchLight.enabled;
+        torchLight.enabled = newValue;
+        animator.SetBool("torchEnabled", newValue);
     }
 
     void move()
