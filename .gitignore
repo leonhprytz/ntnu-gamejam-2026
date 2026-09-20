@@ -18,6 +18,8 @@
 .gitconfig
 .idea
 
+.DS_Store
+DevBuild.zip
 DevBuild/
 Build/
 Data/
