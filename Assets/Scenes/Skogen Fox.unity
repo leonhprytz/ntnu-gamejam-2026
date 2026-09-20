@@ -30384,7 +30384,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.421875
+  orthographic size: 10.03125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -31590,7 +31590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad643d670c1b394bb7aad9721c3bfb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestLine
-  priority: 0
+  priority: 1
   _active: 0
   questName: HidingFox
   steps:
@@ -31620,7 +31620,7 @@ MonoBehaviour:
     branches: []
     logic: {fileID: 0}
   dialogue: {fileID: 1745336477}
-  lightValueToStartQuestLine: 10
+  lightValueToStartQuestLine: 0
   lightValueWin: 10
   lightValueLose: -10
   spawnsNPC: 0
@@ -32038,7 +32038,7 @@ MonoBehaviour:
   movementSpeed: 1
   followDistance: 1
   stopTrigger: {fileID: 2020272450}
-  whenToPlay: 0
+  whenToPlay: 1
 --- !u!1 &2020272449
 GameObject:
   m_ObjectHideFlags: 0
