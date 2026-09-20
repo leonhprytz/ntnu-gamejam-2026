@@ -19,6 +19,7 @@ public class DialogueInteraction : MonoBehaviour
     private Action onFinished;
     private string[] choices;
     private Action<int> onChosen;
+    private Keyboard typedChoiceKeyboard;
     private Coroutine typeRoutine;
     private bool typing;
     private int lineStartFrame;
@@ -103,6 +104,7 @@ public class DialogueInteraction : MonoBehaviour
         choices = options;
         onChosen = chosenCallback;
         IsPlaying = true;
+        ListenForTypedChoice();
 
         if (canvas != null)
         {
@@ -118,6 +120,7 @@ public class DialogueInteraction : MonoBehaviour
     public void Hide()
     {
         StopTyping();
+        StopListeningForTypedChoice();
         IsPlaying = false;
         onFinished = null;
         choices = null;
@@ -191,15 +194,67 @@ public class DialogueInteraction : MonoBehaviour
         {
             if (keyboard[(Key)((int)Key.Digit1 + i)].wasPressedThisFrame)
             {
-                choices = null;
-
-                Action<int> callback = onChosen;
-                onChosen = null;
-                IsPlaying = false;
-                callback?.Invoke(i);
+                Choose(i);
                 return;
             }
         }
+    }
+
+    void Choose(int index)
+    {
+        if (choices == null)
+        {
+            return;
+        }
+
+        choices = null;
+        StopListeningForTypedChoice();
+
+        Action<int> callback = onChosen;
+        onChosen = null;
+        IsPlaying = false;
+        callback?.Invoke(index);
+    }
+
+    // The Key enum addresses physical key positions, which WebGL can't resolve
+    // for digits, so the typed character is what actually arrives in a build.
+    void ListenForTypedChoice()
+    {
+        if (typedChoiceKeyboard != null || Keyboard.current == null)
+        {
+            return;
+        }
+
+        typedChoiceKeyboard = Keyboard.current;
+        typedChoiceKeyboard.onTextInput += OnTextInput;
+    }
+
+    void StopListeningForTypedChoice()
+    {
+        if (typedChoiceKeyboard == null)
+        {
+            return;
+        }
+
+        typedChoiceKeyboard.onTextInput -= OnTextInput;
+        typedChoiceKeyboard = null;
+    }
+
+    void OnTextInput(char character)
+    {
+        if (choices == null)
+        {
+            return;
+        }
+
+        int index = character - '1';
+
+        if (index < 0 || index >= choices.Length)
+        {
+            return;
+        }
+
+        Choose(index);
     }
 
     void StopTyping()
