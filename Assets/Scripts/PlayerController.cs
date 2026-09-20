@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void toggleTorch()
+    public void toggleTorch()
     {
         bool newValue = !torchLight.enabled;
         torchLight.enabled = newValue;

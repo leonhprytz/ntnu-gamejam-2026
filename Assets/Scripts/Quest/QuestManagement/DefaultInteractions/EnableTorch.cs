@@ -7,6 +7,7 @@ public class EnableTorch : InteractionCheckpoint
         Debug.Log("Enabling torch!!");
         PlayerController playerController = GetComponent<PlayerController>();
         playerController.torchUnlocked = true;
+        playerController.toggleTorch();
         MarkInteractionComplete();
     }
 }
