@@ -2,11 +2,44 @@ using System;
 using System.Linq;
 using UnityEngine;
 
+public enum QuestState
+{
+    NotStarted,
+    Started,
+    Won,
+    Loss,
+}
+
 // [CustomEditor(typeof(QuestLine))]
 public class QuestLine : Interactable
 {
     public string questName;
     public QuestStep[] steps;
+
+    private bool firstStep = true;
+
+    [SerializeField]
+    private QuestState _state = QuestState.NotStarted;
+    public QuestState state
+    {
+        get { return _state; }
+        set
+        {
+            _state = value;
+            switch (state)
+            {
+                case QuestState.Started:
+                    StartQuestLine();
+                    break;
+                case QuestState.Won:
+                    Win();
+                    break;
+                case QuestState.Loss:
+                    Lose();
+                    break;
+            }
+        }
+    }
 
     [Tooltip("Optional: found among this NPC's children when left empty.")]
     public DialogueInteraction dialogue;
@@ -14,16 +47,19 @@ public class QuestLine : Interactable
     public int currentStepIndex = 0;
 
     [Header("light value settings")]
-    public int lightValueToStartQuestLine;
-    public int lightValueWin;
-    public int lightValueLose;
+    public float lightValueToStartQuestLine;
+    public float lightValueWin;
+    public float lightValueLose;
 
     [Header("npc settings")]
     public bool spawnsNPC;
     public GameObject npcToSpawn;
 
     public event Action<QuestLine> questlineCompletedEvent;
-    private bool questLineStarted = false;
+    private bool questLineStarted
+    {
+        get { return state == QuestState.Started; }
+    }
 
     [SerializeField]
     public bool questLineWon;
@@ -88,6 +124,7 @@ public class QuestLine : Interactable
             return false;
         }
 
+        Debug.Log("Current step: " + currentStepIndex);
         QuestStep step = steps[currentStepIndex];
 
         if (step.IsDialogue)
@@ -120,7 +157,8 @@ public class QuestLine : Interactable
 
     public void StartQuestLine()
     {
-        Debug.Log("questline started: " + questName);
+        Debug.Log("Questline " + this.name + " started");
+        Debug.Log("Started as " + this.active);
         GoToStep(0);
         if (npcToSpawn != null)
         {
@@ -154,6 +192,11 @@ public class QuestLine : Interactable
     {
         QuestStep step = currentStepIndex < steps.Length ? steps[currentStepIndex] : null;
 
+        if (step == null)
+        {
+            state = QuestState.Won;
+        }
+
         // A branching step doesn't advance on its own: the box puts the
         // alternatives up and hands back the one the player picked.
         if (step != null && step.HasBranches && dialogue != null)
@@ -176,6 +219,23 @@ public class QuestLine : Interactable
 
     private void GoToStep(int stepIndex)
     {
+        QuestStep step = currentStepIndex < steps.Length ? steps[currentStepIndex] : null;
+        if (step != null && !firstStep)
+        {
+            switch (step.nextState)
+            {
+                case StateAfterCompletion.Win:
+                    state = QuestState.Won;
+                    return;
+                case StateAfterCompletion.Lose:
+                    state = QuestState.Loss;
+                    return;
+                case StateAfterCompletion.Continue:
+                    break; // just follow through
+            }
+        }
+        firstStep = false;
+
         currentStepIndex = Mathf.Clamp(stepIndex, 0, steps.Length);
 
         if (currentStepIndex < steps.Length)
@@ -187,20 +247,29 @@ public class QuestLine : Interactable
             return;
         }
 
-        Win(); // assume win
-        active = false; // completed deactivate
+        // assume win if end of quest is reached without explicit state change
+        state = QuestState.Won;
+    }
+
+    private void Win()
+    {
+        active = false;
+        QuestManager.instance.lightValue += lightValueWin;
         // The box isn't hidden here: a closing dialogue step should stay
         // readable until the player presses interact again.
         questlineCompletedEvent?.Invoke(this);
     }
 
-    private void Win()
+    private void Lose()
     {
-        QuestManager.instance.lightValue += lightValueWin;
-        questLineWon = true;
+        active = false;
+        QuestManager.instance.lightValue += lightValueLose;
+        // The box isn't hidden here: a closing dialogue step should stay
+        // readable until the player presses interact again.
+        questlineCompletedEvent?.Invoke(this);
     }
 
-    void OnLightValueChanged(int currentLightValue)
+    void OnLightValueChanged(float currentLightValue)
     {
         if (questLineStarted)
         {
@@ -209,8 +278,12 @@ public class QuestLine : Interactable
 
         if (currentLightValue >= lightValueToStartQuestLine)
         {
-            questLineStarted = true;
-            StartQuestLine();
+            state = QuestState.Started;
         }
+    }
+
+    void OnValidate()
+    {
+        state = _state;
     }
 }

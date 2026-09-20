@@ -60,6 +60,8 @@ public abstract class Interactable : MonoBehaviour
             return;
 
         isInRange = true;
+        Debug.Log("In range " + isInRange);
+        Debug.Log("Active " + active);
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -68,6 +70,8 @@ public abstract class Interactable : MonoBehaviour
             return;
 
         isInRange = false;
+        Debug.Log("In range " + isInRange);
+        Debug.Log("Active " + active);
     }
 
     void OnValidate()

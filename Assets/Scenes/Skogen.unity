@@ -20389,11 +20389,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: lightValueLose
-      value: -20
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[0].auto
@@ -20458,6 +20458,18 @@ PrefabInstance:
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: lightValueToStartQuestLine
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+      propertyPath: steps.Array.data[2].nextState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+      propertyPath: steps.Array.data[3].nextState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
+      propertyPath: steps.Array.data[4].nextState
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[0].lines.Array.size
@@ -21039,7 +21051,6 @@ MonoBehaviour:
   questlines:
   - {fileID: 0}
   questlinesCompleted: 
-  lightValue: 0
   bonfireManager: {fileID: 1578517404}
 --- !u!4 &1296037637
 Transform:
@@ -24133,7 +24144,7 @@ MonoBehaviour:
   bonfireAudioController: {fileID: 1833634013}
   emberController: {fileID: 1384091112}
   _size: 0
-  lightAmount: 1
+  _lightAmount: 1
   minRadius: 1.85
   maxRadius: 5
   mediumThreshold: 30
@@ -24250,14 +24261,16 @@ MonoBehaviour:
   questName: Light the fire
   steps:
   - kind: 1
+    nextState: 1
     auto: 0
     lines: []
     branches: []
     logic: {fileID: 1578517404}
+  _state: 0
   dialogue: {fileID: 0}
   lightValueToStartQuestLine: 0
   lightValueWin: 10
-  lightValueLose: -20
+  lightValueLose: 0
   spawnsNPC: 0
   npcToSpawn: {fileID: 0}
   questLineWon: 0
