@@ -45,7 +45,6 @@ public class BonfireManager : InteractionCheckpoint
 
     public override void Interact()
     {
-        AddLight(10F);
         MarkInteractionComplete();
     }
 

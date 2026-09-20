@@ -243,6 +243,9 @@ public class QuestLine : Interactable
         }
         firstStep = false;
 
+        if (state == QuestState.Won || state == QuestState.Loss)
+            return;
+
         Debug.Log("Goto in " + questName + ": " + currentStepIndex);
         currentStepIndex = Mathf.Clamp(stepIndex, 0, steps.Length);
 
