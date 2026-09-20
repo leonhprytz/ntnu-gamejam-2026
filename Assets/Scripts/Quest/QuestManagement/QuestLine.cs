@@ -25,6 +25,11 @@ public class QuestLine : Interactable
         get { return _state; }
         set
         {
+            if (state == QuestState.Won || state == QuestState.Loss)
+            {
+                return;
+            }
+
             _state = value;
             switch (state)
             {
@@ -101,7 +106,8 @@ public class QuestLine : Interactable
         if (!questLineStarted)
             return false;
 
-        if(!hasInteracted){
+        if (!hasInteracted)
+        {
             hasInteracted = true;
         }
 
@@ -124,7 +130,7 @@ public class QuestLine : Interactable
             return false;
         }
 
-        Debug.Log("Current step: " + currentStepIndex);
+        Debug.Log("Interacting with current step in " + questName + ": " + currentStepIndex);
         QuestStep step = steps[currentStepIndex];
 
         if (step.IsDialogue)
@@ -141,6 +147,7 @@ public class QuestLine : Interactable
             return true;
         }
 
+        Debug.Log("Step in " + questName + " is " + (step.logic == null ? "not logic" : "logic"));
         if (step.logic == null)
             return false;
 
@@ -236,6 +243,7 @@ public class QuestLine : Interactable
         }
         firstStep = false;
 
+        Debug.Log("Goto in " + questName + ": " + currentStepIndex);
         currentStepIndex = Mathf.Clamp(stepIndex, 0, steps.Length);
 
         if (currentStepIndex < steps.Length)
