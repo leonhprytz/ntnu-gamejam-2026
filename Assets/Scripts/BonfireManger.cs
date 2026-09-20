@@ -7,7 +7,7 @@ public enum BonfireSize
     Large,
 }
 
-public class BonfireManager : MonoBehaviour
+public class BonfireManager : InteractionCheckpoint
 {
     private Animator animator;
 
@@ -30,17 +30,13 @@ public class BonfireManager : MonoBehaviour
         }
     }
 
-    public void increaseBonfireSize()
+    public override void Interact()
     {
-        switch (size)
+        if (size == BonfireSize.Small)
         {
-            case BonfireSize.Small:
-                size = BonfireSize.Medium;
-                break;
-            case BonfireSize.Medium:
-                size = BonfireSize.Large;
-                break;
+            size = BonfireSize.Medium;
         }
+        MarkInteractionComplete();
     }
 
     void OnValidate()

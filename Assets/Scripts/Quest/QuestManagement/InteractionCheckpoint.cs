@@ -5,7 +5,6 @@ using UnityEngine;
 // player interacts with, and it drives its current checkpoint directly.
 public abstract class InteractionCheckpoint : MonoBehaviour
 {
-
     public event Action<InteractionCheckpoint> interactionCompletedEvent;
     public bool interactionCompleted;
 
@@ -32,11 +31,6 @@ public abstract class InteractionCheckpoint : MonoBehaviour
         interactionCompletedEvent?.Invoke(this);
     }
 
-    public void SetQuestLineWon(bool win)
-    {
-        questLine.questLineWon = win;
-    }
-
     void Update()
     {
         if (!done && interactionCompleted)
@@ -44,5 +38,4 @@ public abstract class InteractionCheckpoint : MonoBehaviour
             MarkInteractionComplete();
         }
     }
-
 }

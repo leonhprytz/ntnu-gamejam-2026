@@ -74,6 +74,7 @@ public class NPCMovement : InteractionCheckpoint
         {
             interactableToActivateOnEnd.active = true;
         }
+        MarkInteractionComplete();
     }
 
     private MoveDirection calculateAnimationMoveDirection(Vector2 vector)

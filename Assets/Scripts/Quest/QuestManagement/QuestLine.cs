@@ -24,6 +24,8 @@ public class QuestLine : Interactable
 
     public event Action<QuestLine> questlineCompletedEvent;
     private bool questLineStarted = false;
+
+    [SerializeField]
     public bool questLineWon;
 
     // Questlines outrank scenery, so walking up to an NPC standing next to a
@@ -173,10 +175,17 @@ public class QuestLine : Interactable
             return;
         }
 
+        Win(); // assume win
         active = false; // completed deactivate
         // The box isn't hidden here: a closing dialogue step should stay
         // readable until the player presses interact again.
         questlineCompletedEvent?.Invoke(this);
+    }
+
+    private void Win()
+    {
+        QuestManager.instance.lightValue += lightValueWin;
+        questLineWon = true;
     }
 
     void OnLightValueChanged(int currentLightValue)

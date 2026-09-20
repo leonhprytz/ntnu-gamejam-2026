@@ -16817,94 +16817,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &469014917
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 469014918}
-  m_Layer: 0
-  m_Name: QuestLines
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &469014918
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 469014917}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 471047877}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &471047876
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 471047877}
-  - component: {fileID: 471047878}
-  m_Layer: 0
-  m_Name: QuestLine1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &471047877
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471047876}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1156674000}
-  m_Father: {fileID: 469014918}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &471047878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471047876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ad643d670c1b394bb7aad9721c3bfb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::QuestLine
-  priority: 0
-  _active: 0
-  questName: ListenToGuitar
-  steps: []
-  dialogue: {fileID: 0}
-  lightValueToStartQuestLine: 10
-  lightValueWin: 10
-  lightValueLose: 10
-  spawnsNPC: 1
-  npcToSpawn: {fileID: 0}
-  questLineWon: 0
 --- !u!1 &494009916
 GameObject:
   m_ObjectHideFlags: 0
@@ -19729,7 +19641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[2].auto
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 834112649980203084, guid: 2709bc4d769e40b4894f62ef2948cbaa, type: 3}
       propertyPath: steps.Array.data[2].kind
@@ -20170,37 +20082,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1156673999
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1156674000}
-  m_Layer: 0
-  m_Name: SpawnGuitarNPCPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1156674000
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156673999}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.59, y: 3.74, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 471047877}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1253115732
 GameObject:
   m_ObjectHideFlags: 0
@@ -20358,7 +20239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestManager
   questlines:
-  - {fileID: 471047878}
+  - {fileID: 0}
   questlinesCompleted: 
   lightValue: 0
   bonfireManager: {fileID: 1578517404}
@@ -23344,6 +23225,8 @@ GameObject:
   - component: {fileID: 1578517404}
   - component: {fileID: 1578517405}
   - component: {fileID: 1578517406}
+  - component: {fileID: 1578517408}
+  - component: {fileID: 1578517407}
   m_Layer: 0
   m_Name: "B\xE5l"
   m_TagString: Untagged
@@ -23447,6 +23330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4619ddaf1fe1941a7b6d375de701f08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BonfireManager
+  interactionCompleted: 0
   fireController: {fileID: 2022259894}
   bonfireAudioController: {fileID: 1833634013}
   emberController: {fileID: 1384091112}
@@ -23510,6 +23394,70 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.16}
   m_Size: {x: 0.77528447, y: 0.33119562}
   m_Direction: 1
+--- !u!58 &1578517407
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578517401}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.2}
+  m_Radius: 0.6
+--- !u!114 &1578517408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578517401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ad643d670c1b394bb7aad9721c3bfb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestLine
+  priority: 0
+  _active: 1
+  questName: Light the fire
+  steps:
+  - kind: 1
+    auto: 0
+    lines: []
+    branches: []
+    logic: {fileID: 1578517404}
+  dialogue: {fileID: 0}
+  lightValueToStartQuestLine: 0
+  lightValueWin: 10
+  lightValueLose: -20
+  spawnsNPC: 0
+  npcToSpawn: {fileID: 0}
+  questLineWon: 0
 --- !u!1 &1594791495
 GameObject:
   m_ObjectHideFlags: 0
@@ -27147,7 +27095,6 @@ SceneRoots:
   - {fileID: 1517988593}
   - {fileID: 1578517403}
   - {fileID: 1296037637}
-  - {fileID: 469014918}
   - {fileID: 1833404243}
   - {fileID: 676703593}
   - {fileID: 227335281}
