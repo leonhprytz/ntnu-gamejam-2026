@@ -8,6 +8,8 @@ using TMPro;
 // Dialogue prefab under the NPC and this hides itself until a step plays.
 public class DialogueInteraction : MonoBehaviour
 {
+    private static readonly string[] ChoiceKeyNames = { "Z", "X" };
+
     public TextMeshProUGUI textComponent;
     public float textSpeed = 0.03f;
 
@@ -19,7 +21,6 @@ public class DialogueInteraction : MonoBehaviour
     private Action onFinished;
     private string[] choices;
     private Action<int> onChosen;
-    private Keyboard typedChoiceKeyboard;
     private Coroutine typeRoutine;
     private bool typing;
     private int lineStartFrame;
@@ -104,23 +105,21 @@ public class DialogueInteraction : MonoBehaviour
         choices = options;
         onChosen = chosenCallback;
         IsPlaying = true;
-        ListenForTypedChoice();
 
         if (canvas != null)
         {
             canvas.enabled = true;
         }
 
-        for (int i = 0; i < options.Length; i++)
+        for (int i = 0; i < options.Length && i < ChoiceKeyNames.Length; i++)
         {
-            textComponent.text += "\n" + (i + 1) + ") " + options[i];
+            textComponent.text += "\n" + ChoiceKeyNames[i] + ") " + options[i];
         }
     }
 
     public void Hide()
     {
         StopTyping();
-        StopListeningForTypedChoice();
         IsPlaying = false;
         onFinished = null;
         choices = null;
@@ -190,71 +189,31 @@ public class DialogueInteraction : MonoBehaviour
             return;
         }
 
-        for (int i = 0; i < choices.Length && i < 9; i++)
+        if (keyboard.zKey.wasPressedThisFrame)
         {
-            if (keyboard[(Key)((int)Key.Digit1 + i)].wasPressedThisFrame)
-            {
-                Choose(i);
-                return;
-            }
+            Choose(0);
+            return;
+        }
+
+        if (keyboard.xKey.wasPressedThisFrame)
+        {
+            Choose(1);
         }
     }
 
     void Choose(int index)
     {
-        if (choices == null)
+        if (choices == null || index >= choices.Length)
         {
             return;
         }
 
         choices = null;
-        StopListeningForTypedChoice();
 
         Action<int> callback = onChosen;
         onChosen = null;
         IsPlaying = false;
         callback?.Invoke(index);
-    }
-
-    // The Key enum addresses physical key positions, which WebGL can't resolve
-    // for digits, so the typed character is what actually arrives in a build.
-    void ListenForTypedChoice()
-    {
-        if (typedChoiceKeyboard != null || Keyboard.current == null)
-        {
-            return;
-        }
-
-        typedChoiceKeyboard = Keyboard.current;
-        typedChoiceKeyboard.onTextInput += OnTextInput;
-    }
-
-    void StopListeningForTypedChoice()
-    {
-        if (typedChoiceKeyboard == null)
-        {
-            return;
-        }
-
-        typedChoiceKeyboard.onTextInput -= OnTextInput;
-        typedChoiceKeyboard = null;
-    }
-
-    void OnTextInput(char character)
-    {
-        if (choices == null)
-        {
-            return;
-        }
-
-        int index = character - '1';
-
-        if (index < 0 || index >= choices.Length)
-        {
-            return;
-        }
-
-        Choose(index);
     }
 
     void StopTyping()
