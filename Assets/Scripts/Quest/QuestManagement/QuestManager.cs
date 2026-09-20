@@ -62,7 +62,7 @@ public class QuestManager : MonoBehaviour
         }
         else
         {
-            lightValue -= questline.lightValueLose;
+            lightValue += questline.lightValueLose;
         }
     }
 
